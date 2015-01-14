@@ -20,14 +20,6 @@ demoApp.controller('DemoControl', ['$scope', '$firebase', function($scope, $fire
 	//open connection
 	var ref = new Firebase(url);
 
-	//passes connection to angular fire
-	//you have to specificly tell it is an array, or an object
-	$scope.posts = $firebase(ref).$asArray();
-
-	$scope.addPost=function(){
-		$scope.posts.$add($scope.newPost);
-		$scope.newPost = {};
-	}
 
 }]);
 

@@ -14,7 +14,18 @@ app.config(['$routeProvider', function($routeProvider){
 }]);
 
 app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
-	console.log("goodbye");
+	//store firebase database URL
+	var url = "https://quickclickpicks.firebaseio.com/users";
+
+	//open connection
+	var ref = new Firebase(url);
+
+	//passes connection to angular fire
+	//you have to specificly tell it is an array, or an object
+	$scope.users = $firebase(ref).$asArray();
+
+	
+
 }]);
 
 app.controller('eventController', ['$scope', '$firebase', function($scope, $firebase){
