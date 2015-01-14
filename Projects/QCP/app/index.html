@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>Quick Click Picks</title>
+		<script type="text/javascript" src="libs/angular/angular.js"></script>
+		<script type="text/javascript" src="libs/firebase/firebase.js"></script>
+		<script type="text/javascript" src="libs/angularfire/dist/angularfire.js"></script>
+		<script type="text/javascript" src="libs/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<h1><a href="#/">Quick Click Picks!</a></h1>
+			<p>by eddie g</p>
+			<p>Login / Signup / About</p>
+		</header>
+		
+		<!-- Signup -->
+		<div class="signupArea">
+
+			<form ng-submit="addUser()" class="signup">	
+				<div>
+					<input type="text" ng-model="newUser.username" placeholder="Username" autofocus/>
+				</div>
+				<div>
+					<input type="text" ng-model="newUser.password" placeholder="Password"/>
+				</div>
+				<div>
+					<button type="submit">Sign Up</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- View Area -->
+		<div>
+			<a href="#/event">Event</a>
+			
+			<div ng-view>
+				
+			</div>
+
+		</div>
+
+		<div>
+			<h2>Upcoming Events</h2>
+		</div>
+	</body>
+</html>

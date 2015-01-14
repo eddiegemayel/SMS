@@ -1,0 +1,42 @@
+<h2>Hello There World</h2>
+
+<div ng-repeat="post in posts">
+		<p>{{post.body}} <strong>-</strong> {{post.author}}</p>
+		<button ng-click="posts.$remove(post)">Remove</button>
+		<!--$remove argument can take $index argument as well as post. -->
+		<button ng-click="$parent.changePost = post">Edit</button>
+</div>
+
+
+
+<button ng-click = "showNew = !showNew">Add New</button>
+
+<div ng-show="showNew">
+<form ng-submit="addPost()">
+	<div>
+		<textarea ng-model="newPost.body" placeholder="Body">
+		</textarea>
+	</div>
+	<div>
+	<input type="text" ng-model="newPost.author" placeholder="Name">
+	</div>
+	<div>
+	<button type="submit">Save Post</button>
+	</div>
+</form>
+</div>
+
+<div ng-show="changePost">
+<form ng-submit="posts.$save(changePost); changePost=false;">
+	<div>
+		<textarea ng-model="changePost.body" placeholder="Body">
+		</textarea>
+	</div>
+	<div>
+	<input type="text" ng-model="changePost.author" placeholder="Name">
+	</div>
+	<div>
+	<button type="submit">Update Post</button>
+	</div>
+</form>
+</div>
