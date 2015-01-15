@@ -1,3 +1,20 @@
+<!-- Signup -->
+		<div class="signupArea">
+
+			<form ng-submit="addUser()" class="signup">	
+				<div>
+					<input type="text" ng-model="newUser.username" placeholder="Username" autofocus/>
+				</div>
+				<div>
+					<input type="text" ng-model="newUser.password" placeholder="Password"/>
+				</div>
+				<div>
+					<button type="submit">Sign Up</button>
+				</div>
+			</form>
+		</div>
+
+
 <div class="happeningNow">
 
 	<h2>Happening NOW!</h2>
@@ -9,15 +26,17 @@
 <div class="upcoming">
 	<h2>Upcoming Events</h2>
 	<div>
-		<div>
-			<h2>UFC 183</h2>
-			<h3>January 18, 2015</h3>
+		<div class="floatLeft">
+			<h3>UFC 183</h3>
+			<h4>January 18, 2015</h4>
 			<img src="images/fight2.jpg"/>
 		</div>
-		<div>
-			<h2>UFC 184</h2>
-			<h3>January 31, 2015</h3>
+			
+		<div class="floatRight">
+			<h3>UFC 184</h3>
+			<h4>January 31, 2015</h4>
 			<img src="images/fight3.jpg"/>
 		</div>
+			
 	</div>
 </div>

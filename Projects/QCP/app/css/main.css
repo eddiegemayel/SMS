@@ -1,14 +1,63 @@
+*{
+	margin-right: .5%;
+	margin-left: .5%;
+}
+
 body{
 	background-color:#FDFBEC;
+}
+
+header{
+	margin-bottom: 2%;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Merriweather', serif;
+}
+
+h2{
+	font-size: 250%;
 }
 
 a{
 	text-decoration: none;
 }
 
-.chatroom{
-	height:500px; 
-	width: 500px;
+.title{
+	vertical-align: middle;
+	text-align: center;
+	clear: both;
+}
+
+.leftNav{
+	float: left;
+}
+
+.rightNav{
 	float: right;
+	width:220px;
+}
+
+.eventContainer{
+	float:left;
 	clear: left;
+	width:600px;
+}
+
+.chatroom{
+	min-height: 100px; 
+	width: 600px;
+	float: right;
+}
+
+.floatRight{
+	float: right;
+	height:100px; 
+	width: 900px;
+}
+
+.floatLeft{
+	float: left;
+	height: 100px;
+	width: 100px;
 }

@@ -10,6 +10,14 @@ app.config(['$routeProvider', function($routeProvider){
 		when('/event', {
 			controller: "eventController",
 			templateUrl : 'views/event.html'
+		}).
+		when('/about', {
+			controller:"aboutController",
+			templateUrl:"views/about.html"
+		}).
+		when('/login', {
+			controller:"loginController",
+			templateUrl : "views/login.html"
 		});
 }]);
 

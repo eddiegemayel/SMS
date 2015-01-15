@@ -2,35 +2,25 @@
 <html ng-app="myApp">
 	<head>
 		<title>Quick Click Picks</title>
+		<!-- angular, firebase and javascript libraries -->
 		<script type="text/javascript" src="libs/angular/angular.js"></script>
 		<script type="text/javascript" src="libs/firebase/firebase.js"></script>
 		<script type="text/javascript" src="libs/angularfire/dist/angularfire.js"></script>
 		<script type="text/javascript" src="libs/angular-route/angular-route.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		
+		<!-- stylesheets and fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css" type="text/css"/>
+
 	</head>
 	<body>
 		<!-- Header -->
 		<header>
-			<h1><a href="#/">Quick Click Picks!</a></h1>
-			<p>by eddie g</p>
-			<p>Login / Signup / About</p>
+			<h1 class="title"><a href="#/">Quick Click Picks!</a></h1>
+			<p class="leftNav">by eddie g</p>
+			<p class="rightNav"><a href="#/">Home</a> / <a href="#/login">Login</a> / <a href="#signupArea">Signup</a> / <a href="#/about">About</a></p>
 		</header>
-		
-		<!-- Signup -->
-		<div class="signupArea">
-
-			<form ng-submit="addUser()" class="signup">	
-				<div>
-					<input type="text" ng-model="newUser.username" placeholder="Username" autofocus/>
-				</div>
-				<div>
-					<input type="text" ng-model="newUser.password" placeholder="Password"/>
-				</div>
-				<div>
-					<button type="submit">Sign Up</button>
-				</div>
-			</form>
-		</div>
 
 		<!-- View Area -->
 		<div>
