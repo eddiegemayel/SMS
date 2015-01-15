@@ -1,6 +1,6 @@
 *{
-	margin-right: .5%;
-	margin-left: .5%;
+	margin: 0;
+	padding:0;
 }
 
 body{
@@ -8,7 +8,14 @@ body{
 }
 
 header{
+	margin-top: 0;
 	margin-bottom: 2%;
+	height: 120px;
+	background-color: #22211F;
+}
+
+header, a{
+	color: #6EBE46;
 }
 
 h1, h2, h3, h4, h5{
@@ -26,16 +33,19 @@ a{
 .title{
 	vertical-align: middle;
 	text-align: center;
+	padding-top: 30px;
 	clear: both;
 }
 
 .leftNav{
 	float: left;
+	margin-left: .5%;
 }
 
 .rightNav{
 	float: right;
 	width:220px;
+	margin-right: .5%;
 }
 
 .eventContainer{
