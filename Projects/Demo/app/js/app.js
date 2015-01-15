@@ -20,6 +20,14 @@ demoApp.controller('DemoControl', ['$scope', '$firebase', function($scope, $fire
 	//open connection
 	var ref = new Firebase(url);
 
+	//passes connection to angular fire
+	//you have to specificly tell it is an array, or an object
+	$scope.posts = $firebase(ref).$asArray();
+
+	$scope.addPost=function(){
+		$scope.posts.$add($scope.newPost);
+		$scope.newPost = {};
+	}
 
 }]);
 
@@ -30,7 +38,7 @@ demoApp.controller('loginController', ['$scope', "$firebaseAuth", function($scop
 	$scope.authObj = $firebaseAuth(ref);
 
 	$scope.authObj.$onAuth(function(data){
-		console.log('data : ', data);
+		console.log('data', data);
 	});
 
 

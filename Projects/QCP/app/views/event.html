@@ -2,14 +2,25 @@
 
 <div class="row1">
 	<img src="images/fight.jpg"/>
-	<img src="images/fight.jpg"/>
+	<img src="images/fight2.jpg"/>
 </div>
 
 <div class="row2">
-	<img src="images/fight.jpg"/>
-	<img src="images/fight.jpg"/>
+	<img src="images/fight3.jpg"/>
+	<img src="images/fight3.jpg"/>
 </div>
 
 <div class="chatroom">
 	<h2>Chatroom</h2>
+
+	<div ng-repeat="message in messages">
+		<p>{{message.body}} <strong>Sent By:</strong> {{message.author}}</p>
+	</div>
+
+	<form ng-submit="sendMessage()">
+		<input type="text" ng-model="newMessage.body" placeholder="Type Message Here . . ." autofocus required/>
+		<input type="text" ng-model="newMessage.author" placeholder="Your Name Here" required/>
+		<button type="submit">Send</button>
+	</form>
+
 </div>

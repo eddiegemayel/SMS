@@ -1,8 +1,14 @@
+body{
+	background-color:#FDFBEC;
+}
+
 a{
 	text-decoration: none;
 }
 
 .chatroom{
+	height:500px; 
+	width: 500px;
 	float: right;
 	clear: left;
 }

@@ -24,10 +24,26 @@ app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
 	//you have to specificly tell it is an array, or an object
 	$scope.users = $firebase(ref).$asArray();
 
-	
+
 
 }]);
 
 app.controller('eventController', ['$scope', '$firebase', function($scope, $firebase){
-	console.log("hello");
+
+	//store firebase database URL
+	var url = "https://quickclickpicks.firebaseio.com/messages";
+
+	//open connection
+	var ref = new Firebase(url);
+
+	//passes connection to angular fire
+	//you have to specificly tell it is an array, or an object
+	$scope.messages = $firebase(ref).$asArray();
+
+	$scope.sendMessage = function(){
+		$scope.messages.$add($scope.newMessage);
+		$scope.newMessage = {};
+
+	}
+
 }]);
