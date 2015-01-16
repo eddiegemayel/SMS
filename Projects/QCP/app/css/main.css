@@ -57,8 +57,22 @@ a{
 	bottom:232px;
 }
 
-.happeningNow{
+.topSection{
+	border: 2px solid #939191;
+	height:170px;
+	width:1460px;
+}
 
+.happeningNow{
+	height: 300px;
+	width: 300px;
+	border: 2px solid #939191;
+}
+
+.upcoming{
+	height:400px;
+	width: 400px;
+	border: 2px solid #939191;
 }
 
 .tagline{
@@ -94,9 +108,6 @@ a{
 
 .chatroom{
 	height: 350px;
-	/*width: 600px;
-	float: right;*/
-	/*border: 2px solid #939191;*/
 	overflow: scroll;
 }
 
@@ -110,4 +121,13 @@ a{
 	float: left;
 	height: 100px;
 	width: 200px;
+}
+
+.loginContainer{
+	height: 350px;
+	width: 300px;
+	padding: 5px;
+	border: 2px solid #939191;
+	float: left;
+	margin-left: 5%;
 }
