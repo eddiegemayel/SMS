@@ -57,6 +57,11 @@ a{
 	width:600px;
 }
 
+.messageArea{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
 .chatroom{
 	min-height: 100px; 
 	max-height: 250px;
