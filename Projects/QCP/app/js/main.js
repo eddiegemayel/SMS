@@ -50,14 +50,15 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 			$rootScope.user = $firebase(ref).$asObject();
 
 			//console logs twitter username
-			// console.log(data.twitter.username);
+			console.log(data.twitter.username);
     	}
   	});
 }]);
 
 //login controller
-app.controller('loginController', ['$scope', '$firebaseAuth', function ($scope,$firebaseAuth) {
+app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {
 	//empty login controller
+	console.log($rootScope.user);
 }]);
 
 //home index controller

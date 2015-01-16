@@ -51,10 +51,40 @@ a{
 	margin-right: 1%;
 }
 
-.eventContainer{
+.chatForm{
+	position: absolute;
+	right: 50px;
+	bottom:232px;
+}
+
+.happeningNow{
+
+}
+
+.tagline{
+	float: left;
+	margin-left: 5%;
+}
+
+.signedIn{
+	float: right;
+	margin-right: 5%;
+}
+
+.eveContainer{
+	border: 2px solid #939191;
 	float:left;
 	clear: left;
 	width:600px;
+	margin-left: 5%;
+	height: 400px;
+}
+
+.chatContainer{
+	border: 2px solid #939191;
+	height: 400px;
+	width: 600px;
+	float: right;
 }
 
 .messageArea{
@@ -63,10 +93,11 @@ a{
 }
 
 .chatroom{
-	min-height: 100px; 
-	max-height: 250px;
-	width: 600px;
-	float: right;
+	height: 350px;
+	/*width: 600px;
+	float: right;*/
+	/*border: 2px solid #939191;*/
+	overflow: scroll;
 }
 
 .floatRight{
@@ -78,5 +109,5 @@ a{
 .floatLeft{
 	float: left;
 	height: 100px;
-	width: 100px;
+	width: 200px;
 }
