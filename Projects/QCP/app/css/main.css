@@ -22,8 +22,12 @@ h1, h2, h3, h4, h5{
 	font-family: 'Merriweather', serif;
 }
 
+h1{
+	font-size: 260%;
+}
+
 h2{
-	font-size: 250%;
+	font-size: 220%;
 }
 
 a{
@@ -44,7 +48,6 @@ a{
 
 .rightNav{
 	float: right;
-	/*width:220px;*/
 	margin-right: 1%;
 }
 
