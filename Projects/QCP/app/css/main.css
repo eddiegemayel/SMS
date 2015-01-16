@@ -59,6 +59,7 @@ a{
 
 .chatroom{
 	min-height: 100px; 
+	max-height: 250px;
 	width: 600px;
 	float: right;
 }

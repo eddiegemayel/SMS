@@ -51,7 +51,6 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	$scope.sendMessage = function(){
 		$scope.messages.$add($scope.newMessage);
 		$scope.newMessage = {};
-
 	}
 
 }]);
