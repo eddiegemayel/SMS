@@ -39,13 +39,13 @@ a{
 
 .leftNav{
 	float: left;
-	margin-left: .5%;
+	margin-left: 1%;
 }
 
 .rightNav{
 	float: right;
-	width:220px;
-	margin-right: .5%;
+	/*width:220px;*/
+	margin-right: 1%;
 }
 
 .eventContainer{
