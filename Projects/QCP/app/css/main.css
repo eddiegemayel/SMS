@@ -1,7 +1,10 @@
+/*Reset*/
 *{
 	margin: 0;
 	padding:0;
 }
+
+/*normals*/
 
 body{
 	background-color:#FDFBEC;
@@ -34,12 +37,16 @@ a{
 	text-decoration: none;
 }
 
+/*index.html Main Header*/
+
 .title{
 	vertical-align: middle;
 	text-align: center;
 	padding-top: 30px;
 	clear: both;
 }
+
+/*Navigation*/
 
 .leftNav{
 	float: left;
@@ -51,28 +58,12 @@ a{
 	margin-right: 1%;
 }
 
-.chatForm{
-	position: absolute;
-	right: 50px;
-	bottom:232px;
-}
 
+/*Top section home page*/
 .topSection{
 	border: 2px solid #939191;
 	height:170px;
 	width:1460px;
-}
-
-.happeningNow{
-	height: 300px;
-	width: 300px;
-	border: 2px solid #939191;
-}
-
-.upcoming{
-	height:400px;
-	width: 400px;
-	border: 2px solid #939191;
 }
 
 .tagline{
@@ -85,20 +76,55 @@ a{
 	margin-right: 5%;
 }
 
+
+/*Front page call to action*/
+
+.happeningNow{
+	height: 300px;
+	width: 300px;
+	border: 2px solid #939191;
+}
+
+
+/*Event area*/
+
 .eveContainer{
 	border: 2px solid #939191;
 	float:left;
 	clear: left;
-	width:600px;
+	width:720px;
 	margin-left: 5%;
-	height: 400px;
+	height: 460px;
+	padding: 10px;
 }
+
+.row1{
+	padding: 10px;
+	padding-left: 55px;
+}
+
+.row2{
+	padding: 10px;
+	padding-left: 55px;
+}
+
+
+
+/* Chatroom area  */
 
 .chatContainer{
 	border: 2px solid #939191;
-	height: 400px;
-	width: 600px;
+	height: 570px;
+	width: 485px;
 	float: right;
+	margin-right: 5%;
+	padding:10px;
+}
+
+.chatroom{
+	height: 520px;
+	overflow: scroll;
+	background-image: url(../images/bg.png);
 }
 
 .messageArea{
@@ -106,9 +132,23 @@ a{
 	margin-bottom: 3px;
 }
 
-.chatroom{
-	height: 350px;
-	overflow: scroll;
+.chatForm{
+	position: absolute;
+	right: 600px;
+	bottom:102px;
+}
+
+.special{
+	color: #6DBE47;
+}
+
+
+/*Upcoming fights*/
+
+.upcoming{
+	height:400px;
+	width: 400px;
+	border: 2px solid #939191;
 }
 
 .floatRight{
@@ -122,6 +162,8 @@ a{
 	height: 100px;
 	width: 200px;
 }
+
+/*Login */
 
 .loginContainer{
 	height: 350px;
