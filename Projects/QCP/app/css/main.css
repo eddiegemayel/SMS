@@ -97,6 +97,10 @@ a{
 	background-color: #F6F7F7;
 }
 
+.pickNow{
+	float:right;
+}
+
 
 /*Upcoming fights*/
 
@@ -130,8 +134,9 @@ a{
 	border: 2px solid #939191;
 	float:left;
 	clear: left;
-	width:720px;
+	width:760px;
 	margin-left: 5%;
+	margin-top: 2%;
 	height: 460px;
 	padding: 10px;
 	background-color: #F6F7F7;
@@ -139,24 +144,33 @@ a{
 
 .row1{
 	padding: 10px;
-	padding-left: 55px;
+	padding-left: 36px;
 }
 
 .row2{
 	padding: 10px;
-	padding-left: 55px;
+	padding-left: 36px;
 }
 
+.fight1form{
+	float: left;
+	text-align: right;
+}
 
+.fight2form{
+	float: right;
+	text-align: left;
+}
 
 /* Chatroom area  */
 
 .chatContainer{
 	border: 2px solid #939191;
 	height: 570px;
-	width: 485px;
+	width: 435px;
 	float: right;
 	margin-right: 5%;
+	margin-top: 2%;
 	padding:10px;
 	background-color: #F6F7F7;
 }
