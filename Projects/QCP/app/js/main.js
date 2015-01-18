@@ -39,7 +39,7 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
  	$rootScope.authObj.$onAuth(function(data){
 
  		//console log login data
-    	console.log('data',data);
+    	// console.log('data',data);
 
     	//if the data exists
     	if(data){
@@ -48,6 +48,10 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 
 			//put user in object
 			$rootScope.user = $firebase(ref).$asObject();
+
+			// $rootScope.data = data.twitter.username;
+
+			// $rootScope.user.$add($rootScope.data);
 
 			//console logs twitter username
 			console.log(data.twitter.username);
