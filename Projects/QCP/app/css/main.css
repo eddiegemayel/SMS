@@ -75,6 +75,17 @@ button.fight {
 		0px 1px 0px rgba(255,255,255,0);
 }
 
+.fight:hover{
+	background: -moz-linear-gradient(
+		top,
+		#96aafa 0%,
+		#5163ad);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#96aafa),
+		to(#5163ad));
+}
+
 
 
 /*index.html Main Header*/
@@ -164,6 +175,18 @@ button.fight {
 		0px -1px 0px rgba(000,000,000,0.4),
 		0px 1px 0px rgba(255,255,255,0.3);
 
+}
+
+#picknow:hover{
+	background: -moz-linear-gradient(
+		top,
+		 #83e055 0%,
+		#6dbe47);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#83e055),
+		to(#6dbe47));
+	
 }
 
 
