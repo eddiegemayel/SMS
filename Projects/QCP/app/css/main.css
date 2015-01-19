@@ -3,6 +3,8 @@
 #FDFBEC = yellow bg
 #6EBE46 = green
 #F6F7F7 = div bg white
+#BA2F2B = red
+#2C37B7 = blue
 */
 
 /*Reset*/
@@ -12,7 +14,6 @@
 }
 
 /*normals*/
-
 body{
 	background-color:#FDFBEC;
 }
@@ -43,8 +44,40 @@ a{
 	text-decoration: none;
 }
 
-/*index.html Main Header*/
+button.fight {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #fdfbec;
+	padding: 4px 11px;
+	background: -moz-linear-gradient(
+		top,
+		#5163ad 0%,
+		#6884f7);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#5163ad),
+		to(#6884f7));
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	border: 2px solid #1f2022;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0),
+		0px 1px 0px rgba(255,255,255,0);
+}
 
+
+
+/*index.html Main Header*/
 .title{
 	vertical-align: middle;
 	text-align: center;
@@ -53,7 +86,6 @@ a{
 }
 
 /*Navigation*/
-
 .leftNav{
 	float: left;
 	margin-left: 1%;
@@ -85,7 +117,6 @@ a{
 
 
 /*Front page call to action*/
-
 .happeningNow{
 	height: 300px;
 	width: 570px;
@@ -104,16 +135,45 @@ a{
 #picknow{
 	width:150px;
 	height:240px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	color: #ffffff;
+	padding: 30px 8px;
+	background: -moz-linear-gradient(
+		top,
+		#6dbe47 0%,
+		#365c23);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#6dbe47),
+		to(#365c23));
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	border: 4px solid #171717;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+
 }
 
 
 /*Upcoming fights*/
-
 .upcoming{
+	border: 2px solid #939191;
 	height:600px;
 	width: 600px;
-	border: 2px solid #939191;
 	float: right;
+	clear: right;
 	padding: 10px;
 	margin-right: 5%;
 	margin-top: 2%;
@@ -132,29 +192,36 @@ a{
 	width: 100px;
 }
 
+.column1{
+	float: left;
+}
+
+.column2{
+	float: right;
+}
+
 
 /*Event area*/
-
-.eveContainer{
+.event{
 	border: 2px solid #939191;
+	width:800px;
+	height: 460px;
 	float:left;
 	clear: left;
-	width:760px;
 	margin-left: 5%;
 	margin-top: 2%;
-	height: 460px;
 	padding: 10px;
 	background-color: #F6F7F7;
 }
 
 .row1{
 	padding: 10px;
-	padding-left: 36px;
+	padding-left: 60px;
 }
 
 .row2{
 	padding: 10px;
-	padding-left: 36px;
+	padding-left: 60px;
 }
 
 .fight1form{
@@ -165,14 +232,25 @@ a{
 .fight2form{
 	float: right;
 	text-align: left;
+	padding-right: 28px;
+}
+
+.redChoice{
+	color: white;
+	background-color: #BA2F2B;
+}
+
+.blueChoice{
+	color: white;
+	background-color: #2C37B7;
 }
 
 /* Chatroom area  */
 
 .chatContainer{
 	border: 2px solid #939191;
-	height: 570px;
-	width: 435px;
+	height: 550px;
+	width: 405px;
 	float: right;
 	margin-right: 5%;
 	margin-top: 2%;
@@ -181,7 +259,7 @@ a{
 }
 
 .chatroom{
-	height: 520px;
+	height: 480px;
 	overflow: scroll;
 	background-image: url(../images/bg.png);
 }
@@ -189,11 +267,12 @@ a{
 .messageArea{
 	margin-top: 3px;
 	margin-bottom: 3px;
+	font-size: 89%;
 }
 
 .chatForm{
 	position: absolute;
-	right: 600px;
+	right: 200px;
 	bottom:102px;
 }
 
