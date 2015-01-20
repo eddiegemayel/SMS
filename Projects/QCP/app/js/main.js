@@ -47,22 +47,23 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 			var ref = new Firebase(url);
 
 			//put user in object
-			$rootScope.user = $firebase(ref).$asObject();
+			$rootScope.user = data;
 
 			// $rootScope.data = data.twitter.username;
 
 			// $rootScope.user.$add($rootScope.data);
 
 			//console logs twitter username
-			console.log(data.twitter.username);
+			console.log("yo",$rootScope.user.twitter.username);
+			$rootScope.userloggedin.name = $rootScope.user.twitter.username;
     	}
   	});
 }]);
 
 //login controller
 app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {
-	//empty login controller
-	console.log($rootScope.user);
+	//test code
+
 }]);
 
 //home index controller

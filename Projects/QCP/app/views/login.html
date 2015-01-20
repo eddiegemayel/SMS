@@ -1,5 +1,7 @@
 <div class="loginContainer">
 <h2>Login</h2>
+<h3 ng-model="userloggedin.name">Hello {{user.twitter.username}}</h3>
 
+<!-- <button ng-click="login()">Login</button> -->
 <button ng-click="authObj.$authWithOAuthPopup('twitter')">Twitter Log In</button>
 </div>
