@@ -95,8 +95,17 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 
 	//send message function in chatroom
 	$scope.sendMessage = function(){
-		//add function
-		$scope.messages.$add($scope.newMessage);
+
+		if($scope.user.twitter.username && $scope.user.twitter.username != " " || $scope.user.twitter.username != undefined){
+			$scope.newMessage.author = "@"+ $scope.user.twitter.username;
+			//add function
+			$scope.messages.$add($scope.newMessage);
+		}else{
+			$scope.newMessage.author = "Guest";
+			//add function
+			$scope.messages.$add($scope.newMessage);
+		}
+
 		//empty message inputs
 		$scope.newMessage = {};
 	}
