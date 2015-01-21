@@ -238,23 +238,23 @@ button.fight {
 
 .row1{
 	padding: 10px;
-	padding-left: 60px;
+	padding-left: 35px;
 }
 
 .row2{
 	padding: 10px;
-	padding-left: 60px;
+	padding-left: 35px;
 }
 
 .fight1form{
 	float: left;
-	text-align: right;
+	text-align: left;
 }
 
 .fight2form{
 	float: right;
-	text-align: left;
-	padding-right: 28px;
+	text-align: right;
+	padding-right: 35px;
 }
 
 .redChoice{
@@ -352,12 +352,12 @@ button.fight {
 }
 
 .delete{
-	width: 44px;
-	height: 24px;
+	width: 22px;
+	height: 22px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #ece7e8;
-	padding: 3px 0px;
+	padding: 2px 0px;
 	background: -moz-linear-gradient(
 		top,
 		#BA2F2B 0%,

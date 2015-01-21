@@ -23,6 +23,22 @@ app.config(['$routeProvider', function($routeProvider){
 }]);
 
 
+app.controller("test", ['$scope', "$firebase", function($scope, $firebase){
+	// $scope.red1 = "tko";
+	$scope.voteRed1 = function(){
+		var url = "https://quickclickpicks.firebaseio.com/fight1";
+ 		//new reference variable, passing url in
+ 		var ref = new Firebase(url);
+		var fight1 = $firebase(ref).$asArray();
+		console.log("Red corner via " +$scope.red1);
+		fight1.$add($scope.red1);
+	}
+	$scope.voteBlue1 = function(){
+		console.log("Blue corner via "+$scope.blue1);
+	}
+}]);
+
+
 //TWITTER LOGIN FUNCTION
 //not sure why it is app.run
 //but you have to pass in firebaseauth, firebase, and rootscope to this twitter login function
@@ -86,7 +102,7 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	//store firebase database URL
 	var url1 = "https://quickclickpicks.firebaseio.com/messages";
 
-	var url2 = "https://quickclickpicks.firebaseio.com"
+	// var url2 = "https://quickclickpicks.firebaseio.com"
 
 	//open connection
 	var ref1 = new Firebase(url1);
@@ -115,16 +131,22 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 		$scope.newMessage = {};
 	}
 
-	$scope.chooseSub= function($scope){
-		console.log("wow, you chose a submission!");
-	}
 
-	$scope.chooseTko= function($scope){
-		console.log("wow, you chose a tko!");
-	}
+	// $scope.voteRed1 = function(red1){
+	// 	console.log(red1.choice);
+	// }
 
-	$scope.chooseDec= function($scope){
-		console.log("wow, you chose a decision!");
-	}
+
+	// $scope.chooseSub= function($scope){
+	// 	console.log("wow, you chose a submission!");
+	// }
+
+	// $scope.chooseTko= function($scope){
+	// 	console.log("wow, you chose a tko!");
+	// }
+
+	// $scope.chooseDec= function($scope){
+	// 	console.log("wow, you chose a decision!");
+	// }
 
 }]);

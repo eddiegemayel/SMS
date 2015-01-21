@@ -6,15 +6,18 @@
 	<!-- row of fights -->
 	<div class="row1">
 		<div class="fight1form">
-			<form class="redChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="redChoice" ng-controller="test" ng-submit="voteRed1()">
+				<p><label><input ng-model="red1" type="radio" value="sub" />Submission</label></p>
+				<p><label><input ng-model="red1" type="radio" value="tko" />(T)KO</label></p>
+				<p><label><input ng-model="red1" type="radio" value="dec" />Decision</label></p>
+				<!-- <p>{{red1}}</p> -->
+				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="blueChoice" ng-controller="test" ng-submit="voteBlue1()">
+				<p><label><input type="radio" ng-model="blue1" value="sub" />Submission</label></p>
+				<p><label><input type="radio" ng-model="blue1" value="tko" />(T)KO</label></p>
+				<p><label><input type="radio" ng-model="blue1" value="dec" />Decision</label></p>
+				<p><button class="fight">Pick!</button></p>
 			</form>
 		</div>
 
@@ -23,15 +26,11 @@
 		<img src="images/fight2.jpg"/>
 
 		<div class="fight2form">
-			<form class="redChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="redChoice" ng-submit="voteRed2()">
+				<p><button type="submit" class="fight">Pick red</button></p>
 			</form>
-			<form class="blueChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="blueChoice" ng-submit="vote()">
+				<p><button class="fight">Pick blue</button></p>
 			</form>
 		</div>
 	</div>
@@ -39,15 +38,18 @@
 	<!-- row 2 of fights -->
 	<div class="row2">
 		<div class="fight1form">
-			<form class="redChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="redChoice" ng-controller="test" ng-submit="voteRed1()">
+				<p><label><input ng-model="red3" type="radio" value="sub" />Submission</label></p>
+				<p><label><input ng-model="red3" type="radio" value="tko" />(T)KO</label></p>
+				<p><label><input ng-model="red3" type="radio" value="dec" />Decision</label></p>
+				<p>{{red1}}</p>
+				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="blueChoice" ng-submit="vote()">
+				<p><label><input type="radio" name="blue3" value="sub" />Submission</label></p>
+				<p><label><input type="radio" name="blue3" value="tko" />(T)KO</label></p>
+				<p><label><input type="radio" name="blue3" value="dec" />Decision</label></p>
+				<p><button class="fight">Pick!</button></p>
 			</form>
 		</div>
 
@@ -56,16 +58,18 @@
 		<img src="images/fight4.jpg"/>
 
 		<div class="fight2form">
-			<form class="redChoice" ng-submit="choose()">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
+			<form class="redChoice" ng-controller="test" ng-submit="voteRed1()">
+				<p><label><input ng-model="red4" type="radio" value="sub" />Submission</label></p>
+				<p><label><input ng-model="red4" type="radio" value="tko" />(T)KO</label></p>
+				<p><label><input ng-model="red4" type="radio" value="dec" />Decision</label></p>
+				<p>{{red1}}</p>
+				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice" ng-submit="choose()">
-				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
-				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
-				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
-			</form>
+			<form class="blueChoice" ng-submit="vote()">
+				<p><label><input type="radio" name="blue4" value="sub" />Submission</label></p>
+				<p><label><input type="radio" name="blue4" value="tko" />(T)KO</label></p>
+				<p><label><input type="radio" name="blue4" value="dec" />Decision</label></p>
+				<p><button class="fight">Pick!</button></p>
 			</form>
 		</div>
 	</div>
@@ -75,10 +79,10 @@
 <!-- chatroom -->
 <div class="chatContainer">
 <h2>Chatroom</h2>
+<h3><span class="special">{{messages.length}}</span> total messages</h3>
 <div class="chatroom">
-	<h3><span class="special">{{messages.length}}</span> total messages</h3>
 	<div class="messageArea" ng-repeat="message in messages">
-		<p>{{message.body}} <strong> --- {{message.author}} </strong><button class="delete" ng-click="messages.$remove(message)">Delete</button></p> 
+		<p>{{message.body}} <strong><span class="special">- {{message.author}} </span></strong><button class="delete" ng-click="messages.$remove(message)">X</button></p> 
 	</div>
 
 	<form class="chatForm" ng-submit="sendMessage()">
