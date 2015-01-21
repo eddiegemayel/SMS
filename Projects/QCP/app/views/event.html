@@ -78,7 +78,7 @@
 <div class="chatroom">
 	<h3><span class="special">{{messages.length}}</span> total messages</h3>
 	<div class="messageArea" ng-repeat="message in messages">
-		<p>{{message.body}} <strong> --- {{message.author}} </strong><button ng-click="messages.$remove(message)">Delete</button></p> 
+		<p>{{message.body}} <strong> --- {{message.author}} </strong><button class="delete" ng-click="messages.$remove(message)">Delete</button></p> 
 	</div>
 
 	<form class="chatForm" ng-submit="sendMessage()">

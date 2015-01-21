@@ -113,6 +113,7 @@ button.fight {
 	height: 85px;
 	background-color: #5163AD;
 	color:#F6F7F7;
+	opacity: .92;
 }
 
 .tagline{
@@ -337,12 +338,12 @@ button.fight {
 .send:hover{
 	background: -moz-linear-gradient(
 		top,
-		 #538a37 0%,
-		#6dbe47);
+		#6dbe47 0%,
+		#365c23);
 	background: -webkit-gradient(
 		linear, left top, left bottom,
-		from(#538a37),
-		to(#6dbe47));
+		from(#6dbe47),
+		to(#365c23));
 }
 
 .chatInput{
@@ -350,8 +351,51 @@ button.fight {
 	width: 345px;
 }
 
-/*Login */
+.delete{
+	width: 44px;
+	height: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ece7e8;
+	padding: 3px 0px;
+	background: -moz-linear-gradient(
+		top,
+		#BA2F2B 0%,
+		#912220);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#BA2F2B),
+		to(#912220));
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	border: 2px solid #000000;
+	-moz-box-shadow:
+		0px 1px 2px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 2px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 2px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0);
+}
 
+.delete:hover{
+	background: -moz-linear-gradient(
+		top,
+		#912220 0%,
+		#BA2F2B);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#912220),
+		to(#BA2F2B));
+}
+
+/*Login */
 .loginContainer{
 	height: 350px;
 	width: 300px;
