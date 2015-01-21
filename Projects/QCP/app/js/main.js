@@ -54,8 +54,8 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 			// $rootScope.user.$add($rootScope.data);
 
 			//console logs twitter username
-			console.log("yo",$rootScope.user.twitter.username);
-			$rootScope.userloggedin.name = $rootScope.user.twitter.username;
+			// console.log("yo",$rootScope.user.twitter.username);
+			$rootScope.userloggedin.username = $rootScope.user.twitter.username;
     	}
   	});
 }]);
@@ -84,23 +84,28 @@ app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
 app.controller('eventController', ['$scope', '$firebase', function($scope, $firebase){
 
 	//store firebase database URL
-	var url = "https://quickclickpicks.firebaseio.com/messages";
+	var url1 = "https://quickclickpicks.firebaseio.com/messages";
+
+	var url2 = "https://quickclickpicks.firebaseio.com"
 
 	//open connection
-	var ref = new Firebase(url);
+	var ref1 = new Firebase(url1);
 
 	//passes connection to angular fire
 	//you have to specificly tell it is an array, or an object
-	$scope.messages = $firebase(ref).$asArray();
+	$scope.messages = $firebase(ref1).$asArray();
 
 	//send message function in chatroom
-	$scope.sendMessage = function(){
+	$scope.sendMessage = function($scope){
 
+		//as long as twitter username is defined
 		if($scope.user.twitter.username && $scope.user.twitter.username != " " || $scope.user.twitter.username != undefined){
+			//signed author in chatroom as twitter username
 			$scope.newMessage.author = "@"+ $scope.user.twitter.username;
 			//add function
 			$scope.messages.$add($scope.newMessage);
 		}else{
+			//otherwise make them guest
 			$scope.newMessage.author = "Guest";
 			//add function
 			$scope.messages.$add($scope.newMessage);
@@ -108,6 +113,18 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 
 		//empty message inputs
 		$scope.newMessage = {};
+	}
+
+	$scope.chooseSub= function($scope){
+		console.log("wow, you chose a submission!");
+	}
+
+	$scope.chooseTko= function($scope){
+		console.log("wow, you chose a tko!");
+	}
+
+	$scope.chooseDec= function($scope){
+		console.log("wow, you chose a decision!");
 	}
 
 }]);

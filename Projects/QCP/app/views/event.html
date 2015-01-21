@@ -1,66 +1,70 @@
+<!-- Event container -->
 <div class="event">
 <h2>UFC 182</h2>
 <h3>January 1, 2015</h3>
 <div class="eventContainer">
+	<!-- row of fights -->
 	<div class="row1">
 		<div class="fight1form">
-			<form class="redChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="redChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
-			<form class="blueChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="blueChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
 		</div>
 
-
+		<!-- fight images -->
 		<img src="images/fight.jpg"/>
 		<img src="images/fight2.jpg"/>
 
 		<div class="fight2form">
-			<form class="redChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="redChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
-			<form class="blueChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="blueChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
 		</div>
 	</div>
 
+	<!-- row 2 of fights -->
 	<div class="row2">
 		<div class="fight1form">
-			<form class="redChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="redChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
-			<form class="blueChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+			<form class="blueChoice">
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
 		</div>
 
+		<!-- fight images -->
 		<img src="images/fight3.jpg"/>
 		<img src="images/fight4.jpg"/>
 
 		<div class="fight2form">
 			<form class="redChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
 			<form class="blueChoice" ng-submit="choose()">
-				<p><button class="fight">Submission</button></p>
-				<p><button class="fight">(T)KO</button></p>
-				<p><button class="fight">Decision</button></p>
+				<p><button class="fight" ng-click="chooseSub()">Submission</button></p>
+				<p><button class="fight" ng-click="chooseTko()">(T)KO</button></p>
+				<p><button class="fight" ng-click="chooseDec()">Decision</button></p>
 			</form>
 			</form>
 		</div>
@@ -68,6 +72,7 @@
 </div>
 </div>
 
+<!-- chatroom -->
 <div class="chatContainer">
 <h2>Chatroom</h2>
 <div class="chatroom">
@@ -82,5 +87,4 @@
 	</form>
 
 </div>
-
 </div>

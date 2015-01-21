@@ -87,7 +87,6 @@ button.fight {
 }
 
 
-
 /*index.html Main Header*/
 .title{
 	vertical-align: middle;
@@ -174,7 +173,6 @@ button.fight {
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,0.4),
 		0px 1px 0px rgba(255,255,255,0.3);
-
 }
 
 #picknow:hover{
@@ -268,8 +266,8 @@ button.fight {
 	background-color: #2C37B7;
 }
 
-/* Chatroom area  */
 
+/* Chatroom area  */
 .chatContainer{
 	border: 2px solid #939191;
 	height: 550px;
