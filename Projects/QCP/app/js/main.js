@@ -22,9 +22,9 @@ app.config(['$routeProvider', function($routeProvider){
 		});
 }]);
 
-
+//controller that allows each ng-model to vote
 app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
-
+	//add vote functions
 	$scope.voteRed1 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight1";
  		//new reference variable, passing url in
