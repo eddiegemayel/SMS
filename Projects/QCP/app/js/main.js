@@ -30,11 +30,11 @@ app.controller("test", ['$scope', "$firebase", function($scope, $firebase){
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var redFight1 = $firebase(ref).$asArray();
+		$scope.redFight1 = $firebase(ref).$asArray();
 		//console log for fun
-		console.log("Red corner via " +$scope.red1);
+		console.log("Red corner via " +$scope.red1.result);
 		//add pick to database
-		redFight1.$add($scope.red1);
+		$scope.redFight1.$add($scope.red1);
 	}
 	$scope.voteBlue1 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/blueFight1";
@@ -42,7 +42,8 @@ app.controller("test", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		var blueFight1 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blue1);
+		console.log("Blue corner via "+$scope.blue1.result);
+
 		//add pick to database
 		blueFight1.$add($scope.blue1);
 	}
@@ -179,6 +180,16 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 
 	//open connection
 	var ref1 = new Firebase(url1);
+
+
+
+	var url2 = "https://quickclickpicks.firebaseio.com/blueFight1";
+ 		//new reference variable, passing url in
+ 		var ref2 = new Firebase(url2);
+ 		//connected to database
+		var blueFight = $firebase(ref2).$asArray();
+
+
 
 	//passes connection to angular fire
 	//you have to specificly tell it is an array, or an object
