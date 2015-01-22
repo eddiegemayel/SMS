@@ -85,17 +85,17 @@
 	<h3>Live Pick Results</h3>
 		<h4><span class="special">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> total votes</h4>
 	<div class="row3">
-		<p><span class="special">{{redFight1.length}}</span> : Jones|</p>
-		<p><span class="special">{{redFight2.length}}</span> : Diaz|</p>
-		<p><span class="special">{{redFight3.length}}</span> : Overeem|</p>
-		<p><span class="special">{{redFight4.length}}</span> : Aldo|</p>
+		<p><span class="special">{{redFight1.length / (redFight1.length + blueFight1.length) * 100}}%</span> : Jones|</p>
+		<p><span class="special">{{redFight2.length / (redFight2.length + blueFight2.length) * 100}}%</span> : Diaz|</p>
+		<p><span class="special">{{redFight3.length / (redFight3.length + blueFight3.length) * 100}}%</span> : Overeem|</p>
+		<p><span class="special">{{redFight4.length / (redFight4.length + blueFight4.length) * 100}}%</span> : Aldo|</p>
 	</div>
 
 	<div class="row4">
-		<p>|Cormier : <span class="special">{{blueFight1.length}}</span> </p>
-		<p>|Silva : <span class="special">{{blueFight2.length}}</span> </p>
-		<p>|Aldo : <span class="special">{{blueFight3.length}}</span> </p>
-		<p>|Mcgregor : <span class="special">{{blueFight4.length}}</span></p>
+		<p>|Cormier : <span class="special">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100}}%</span> </p>
+		<p>|Silva : <span class="special">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100}}%</span> </p>
+		<p>|Browne : <span class="special">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100}}%</span> </p>
+		<p>|Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100}}%</span></p>
 	</div>
 	
 	
