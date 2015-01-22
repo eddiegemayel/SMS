@@ -23,7 +23,7 @@ app.config(['$routeProvider', function($routeProvider){
 }]);
 
 
-app.controller("test", ['$scope', "$firebase", function($scope, $firebase){
+app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 
 	$scope.voteRed1 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight1";
@@ -112,7 +112,6 @@ app.controller("test", ['$scope', "$firebase", function($scope, $firebase){
 	}
 }]);
 
-
 //TWITTER LOGIN FUNCTION
 //not sure why it is app.run
 //but you have to pass in firebaseauth, firebase, and rootscope to this twitter login function
@@ -181,13 +180,11 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	//open connection
 	var ref1 = new Firebase(url1);
 
-
-
-	var url2 = "https://quickclickpicks.firebaseio.com/blueFight1";
- 		//new reference variable, passing url in
- 		var ref2 = new Firebase(url2);
- 		//connected to database
-		var blueFight = $firebase(ref2).$asArray();
+	var url = "https://quickclickpicks.firebaseio.com/redFight1";
+ 	//new reference variable, passing url in
+ 	var ref = new Firebase(url);
+ 	//connected to database
+	$scope.redFight1 = $firebase(ref).$asArray();
 
 
 

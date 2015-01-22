@@ -227,7 +227,7 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 460px;
+	height: 490px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -281,7 +281,7 @@ button.fight {
 }
 
 .chatroom{
-	height: 460px;
+	height: 440px;
 	overflow: scroll;
 	background-image: url(../images/bg.png);
 }

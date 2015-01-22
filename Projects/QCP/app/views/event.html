@@ -6,14 +6,14 @@
 	<!-- row of fights -->
 	<div class="row1">
 		<div class="fight1form">
-			<form class="redChoice" ng-controller="test" ng-submit="voteRed1()">
+			<form class="redChoice" ng-controller="vote" ng-submit="voteRed1()">
 				<p><label><input ng-model="red1.result" type="radio" value="sub" />Submission</label></p>
 				<p><label><input ng-model="red1.result" type="radio" value="tko" />(T)KO</label></p>
 				<p><label><input ng-model="red1.result" type="radio" value="dec" />Decision</label></p>
 				<!-- <p>{{red1}}</p> -->
 				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice" ng-controller="test" ng-submit="voteBlue1()">
+			<form class="blueChoice" ng-controller="vote" ng-submit="voteBlue1()">
 				<p><label><input type="radio" ng-model="blue1.result" value="sub" />Submission</label></p>
 				<p><label><input type="radio" ng-model="blue1.result" value="tko" />(T)KO</label></p>
 				<p><label><input type="radio" ng-model="blue1.result" value="dec" />Decision</label></p>
@@ -26,14 +26,14 @@
 		<img src="images/fight2.jpg"/>
 
 		<div class="fight2form">
-			<form class="redChoice" ng-controller="test" ng-submit="voteRed2()">
+			<form class="redChoice" ng-controller="vote" ng-submit="voteRed2()">
 				<p><label><input ng-model="red2.result" type="radio" value="sub" />Submission</label></p>
 				<p><label><input ng-model="red2.result" type="radio" value="tko" />(T)KO</label></p>
 				<p><label><input ng-model="red2.result" type="radio" value="dec" />Decision</label></p>
 				<!-- <p>{{red2}}</p> -->
 				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice" ng-controller="test" ng-submit="voteBlue2()">
+			<form class="blueChoice" ng-controller="vote" ng-submit="voteBlue2()">
 				<p><label><input type="radio" ng-model="blue2.result" value="sub" />Submission</label></p>
 				<p><label><input type="radio" ng-model="blue2.result" value="tko" />(T)KO</label></p>
 				<p><label><input type="radio" ng-model="blue2.result" value="dec" />Decision</label></p>
@@ -45,14 +45,14 @@
 	<!-- row 2 of fights -->
 	<div class="row2">
 		<div class="fight1form">
-			<form class="redChoice" ng-controller="test" ng-submit="voteRed3()">
+			<form class="redChoice" ng-controller="vote" ng-submit="voteRed3()">
 				<p><label><input ng-model="red3.result" type="radio" value="sub" />Submission</label></p>
 				<p><label><input ng-model="red3.result" type="radio" value="tko" />(T)KO</label></p>
 				<p><label><input ng-model="red3.result" type="radio" value="dec" />Decision</label></p>
 				<!-- <p>{{red3}}</p> -->
 				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice" ng-controller="test" ng-submit="voteBlue3()">
+			<form class="blueChoice" ng-controller="vote" ng-submit="voteBlue3()">
 				<p><label><input type="radio" ng-model="blue3.result" value="sub" />Submission</label></p>
 				<p><label><input type="radio" ng-model="blue3.result" value="tko" />(T)KO</label></p>
 				<p><label><input type="radio" ng-model="blue3.result" value="dec" />Decision</label></p>
@@ -65,14 +65,14 @@
 		<img src="images/fight4.jpg"/>
 
 		<div class="fight2form">
-			<form class="redChoice" ng-controller="test" ng-submit="voteRed4()">
+			<form class="redChoice" ng-controller="vote" ng-submit="voteRed4()">
 				<p><label><input ng-model="red4.result" type="radio" value="sub" />Submission</label></p>
 				<p><label><input ng-model="red4.result" type="radio" value="tko" />(T)KO</label></p>
 				<p><label><input ng-model="red4.result" type="radio" value="dec" />Decision</label></p>
 				<!-- <p>{{red4}}</p> -->
 				<p><button type="submit" class="fight">Pick!</button></p>
 			</form>
-			<form class="blueChoice" ng-controller="test" ng-submit="voteBlue4()">
+			<form class="blueChoice" ng-controller="vote" ng-submit="voteBlue4()">
 				<p><label><input type="radio" ng-model="blue4.result" value="sub" />Submission</label></p>
 				<p><label><input type="radio" ng-model="blue4.result" value="tko" />(T)KO</label></p>
 				<p><label><input type="radio" ng-model="blue4.result" value="dec" />Decision</label></p>
@@ -80,10 +80,13 @@
 			</form>
 		</div>
 
-		<div ng-repeat="blue in blueFight1">
-			<p>yo <strong><span class="special">- {{blue}} </span></strong></p>
-		</div>
+		
 	</div>
+
+	<div class="yo" ng-repeat="red in redFight1">
+			<p>{{red.result}} = {{redFight1.length}}</p>
+	</div>
+
 </div>
 </div>
 
