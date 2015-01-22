@@ -82,24 +82,26 @@
 
 		
 	</div>
+	<h3>Live Pick Results</h3>
+	<div class="row3">
+		<p><span class="special">{{redFight1.length}}</span> : Jones|</p>
+		<p><span class="special">{{redFight2.length}}</span> : Diaz|</p>
+		<p><span class="special">{{redFight3.length}}</span> : Overeem|</p>
+		<p><span class="special">{{redFight4.length}}</span> : Aldo|</p>
+	</div>
 
-
-	<p>Jones Total Votes {{redFight1.length}}</p>
-	<p>DC total votes {{blueFight1.length}}</p>
-	<p>diaz total votes {{blueFight2.length}}</p>
-	<p>spider total votes {{blueFight2.length}}</p>
+	<div class="row4">
+		<p>|Cormier : <span class="special">{{blueFight1.length}}</span> </p>
+		<p>|Silva : <span class="special">{{blueFight2.length}}</span> </p>
+		<p>|Aldo : <span class="special">{{blueFight3.length}}</span> </p>
+		<p>|Mcgregor : <span class="special">{{blueFight4.length}}</span></p>
+	</div>
+	
+	
+<!-- loops thru and shows every jon jones result, i.e tko, sub, dec 
 	<div class="yo" ng-repeat="red in redFight1">
 			<p>jj{{red.result}}</p>
-	</div>
-	<div class="yo" ng-repeat="blue in blueFight1">
-			<p>dc{{blue.result}}</p>
-	</div>
-	<div class="yo" ng-repeat="red in redFight2">
-			<p>diaz{{red.result}}</p>
-	</div>
-	<div class="yo" ng-repeat="blue in blueFight2">
-			<p>silva{{blue.result}}</p>
-	</div>
+	</div> -->
 
 
 </div>

@@ -18,6 +18,10 @@ body{
 	background-color:#FDFBEC;
 }
 
+p{
+	font-family: 'Slabo 27px', serif;
+}
+
 header{
 	margin-top: 0;
 	height: 120px;
@@ -227,7 +231,7 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 490px;
+	height: 570px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -246,6 +250,20 @@ button.fight {
 	padding-left: 35px;
 }
 
+.row3{
+	float: left;
+	padding-left: 316px;
+	text-align: right;
+	margin-top: 1%;
+}
+
+.row4{
+	float: right;
+	padding-right: 316px;
+	text-align: left;
+	margin-top: 1%;
+}
+
 .fight1form{
 	float: left;
 	text-align: left;
@@ -253,8 +271,8 @@ button.fight {
 
 .fight2form{
 	float: right;
-	text-align: right;
-	padding-right: 35px;
+	text-align: left;
+	padding-right: 37px;
 }
 
 .redChoice{
