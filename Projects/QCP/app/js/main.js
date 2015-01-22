@@ -41,74 +41,74 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var blueFight1 = $firebase(ref).$asArray();
+		$scope.blueFight1 = $firebase(ref).$asArray();
 		console.log("Blue corner via "+$scope.blue1.result);
 
 		//add pick to database
-		blueFight1.$add($scope.blue1);
+		$scope.blueFight1.$add($scope.blue1);
 	}
 	$scope.voteRed2 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight2";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var redFight2 = $firebase(ref).$asArray();
+		$scope.redFight2 = $firebase(ref).$asArray();
 		//console log for fun
 		console.log("Red corner via " +$scope.red2);
 		//add pick to database
-		redFight2.$add($scope.red2);
+		$scope.redFight2.$add($scope.red2);
 	}
 	$scope.voteBlue2 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/blueFight2";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var blueFight2 = $firebase(ref).$asArray();
+		$scope.blueFight2 = $firebase(ref).$asArray();
 		console.log("Blue corner via "+$scope.blue2);
 		//add pick to database
-		blueFight2.$add($scope.blue2);
+		$scope.blueFight2.$add($scope.blue2);
 	}
 	$scope.voteRed3 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight3";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var redFight3 = $firebase(ref).$asArray();
+		$scope.redFight3 = $firebase(ref).$asArray();
 		//console log for fun
 		console.log("Red corner via " +$scope.red3);
 		//add pick to database
-		redFight3.$add($scope.red3);
+		$scope.redFight3.$add($scope.red3);
 	}
 	$scope.voteBlue3 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/blueFight3";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var blueFight3 = $firebase(ref).$asArray();
+		$scope.blueFight3 = $firebase(ref).$asArray();
 		console.log("Blue corner via "+$scope.blue3);
 		//add pick to database
-		blueFight3.$add($scope.blue3);
+		$scope.blueFight3.$add($scope.blue3);
 	}
 	$scope.voteRed4 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight4";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var redFight4 = $firebase(ref).$asArray();
+		$scope.redFight4 = $firebase(ref).$asArray();
 		//console log for fun
 		console.log("Red corner via " +$scope.red4);
 		//add pick to database
-		redFight4.$add($scope.red4);
+		$scope.redFight4.$add($scope.red4);
 	}
 	$scope.voteBlue4 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/blueFight4";
  		//new reference variable, passing url in
  		var ref = new Firebase(url);
  		//connected to database
-		var blueFight4 = $firebase(ref).$asArray();
+		$scope.blueFight4 = $firebase(ref).$asArray();
 		console.log("Blue corner via "+$scope.blue4);
 		//add pick to database
-		blueFight4.$add($scope.blue4);
+		$scope.blueFight4.$add($scope.blue4);
 	}
 }]);
 
@@ -171,21 +171,38 @@ app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
 
 //event page controller
 app.controller('eventController', ['$scope', '$firebase', function($scope, $firebase){
-
+	//messages connector
 	//store firebase database URL
 	var url1 = "https://quickclickpicks.firebaseio.com/messages";
-
-	// var url2 = "https://quickclickpicks.firebaseio.com"
-
 	//open connection
 	var ref1 = new Firebase(url1);
 
-	var url = "https://quickclickpicks.firebaseio.com/redFight1";
- 	//new reference variable, passing url in
- 	var ref = new Firebase(url);
- 	//connected to database
-	$scope.redFight1 = $firebase(ref).$asArray();
-
+	//fight vote connectors
+	//each fight vote database connection. so event html ng-repeat can access it
+	var url2 = "https://quickclickpicks.firebaseio.com/redFight1";
+ 	var ref2 = new Firebase(url2);
+	$scope.redFight1 = $firebase(ref2).$asArray();
+	var url3 = "https://quickclickpicks.firebaseio.com/blueFight1";
+ 	var ref3 = new Firebase(url3);
+	$scope.blueFight1 = $firebase(ref3).$asArray();
+	var url4 = "https://quickclickpicks.firebaseio.com/redFight2";
+ 	var ref4 = new Firebase(url4);
+	$scope.redFight2 = $firebase(ref4).$asArray();
+	var url5 = "https://quickclickpicks.firebaseio.com/blueFight2";
+ 	var ref5 = new Firebase(url5);
+	$scope.blueFight2 = $firebase(ref5).$asArray();
+	var url6 = "https://quickclickpicks.firebaseio.com/redFight3";
+ 	var ref6 = new Firebase(url6);
+	$scope.redFight3 = $firebase(ref6).$asArray();
+	var url7 = "https://quickclickpicks.firebaseio.com/blueFight3";
+ 	var ref7 = new Firebase(url7);
+	$scope.blueFight3 = $firebase(ref7).$asArray();
+	var url8 = "https://quickclickpicks.firebaseio.com/redFight4";
+ 	var ref8 = new Firebase(url8);
+	$scope.redFight4 = $firebase(ref8).$asArray();
+	var url9 = "https://quickclickpicks.firebaseio.com/blueFight4";
+ 	var ref9 = new Firebase(url9);
+	$scope.blueFight4 = $firebase(ref9).$asArray();
 
 
 	//passes connection to angular fire
@@ -211,23 +228,5 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 		//empty message inputs
 		$scope.newMessage = {};
 	}
-
-
-	// $scope.voteRed1 = function(red1){
-	// 	console.log(red1.choice);
-	// }
-
-
-	// $scope.chooseSub= function($scope){
-	// 	console.log("wow, you chose a submission!");
-	// }
-
-	// $scope.chooseTko= function($scope){
-	// 	console.log("wow, you chose a tko!");
-	// }
-
-	// $scope.chooseDec= function($scope){
-	// 	console.log("wow, you chose a decision!");
-	// }
 
 }]);

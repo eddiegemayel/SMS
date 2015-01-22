@@ -83,9 +83,24 @@
 		
 	</div>
 
+
+	<p>Jones Total Votes {{redFight1.length}}</p>
+	<p>DC total votes {{blueFight1.length}}</p>
+	<p>diaz total votes {{blueFight2.length}}</p>
+	<p>spider total votes {{blueFight2.length}}</p>
 	<div class="yo" ng-repeat="red in redFight1">
-			<p>{{red.result}} = {{redFight1.length}}</p>
+			<p>jj{{red.result}}</p>
 	</div>
+	<div class="yo" ng-repeat="blue in blueFight1">
+			<p>dc{{blue.result}}</p>
+	</div>
+	<div class="yo" ng-repeat="red in redFight2">
+			<p>diaz{{red.result}}</p>
+	</div>
+	<div class="yo" ng-repeat="blue in blueFight2">
+			<p>silva{{blue.result}}</p>
+	</div>
+
 
 </div>
 </div>
