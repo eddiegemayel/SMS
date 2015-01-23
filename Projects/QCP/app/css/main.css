@@ -122,12 +122,13 @@ button.fight {
 
 .tagline{
 	float: left;
-	margin-left: 5%;
+	margin-left: 6%;
 }
 
 .signedIn{
 	float: right;
-	margin-right: 5%;
+	/*margin-left: 2%;*/
+	margin-right: 30%;
 }
 
 
