@@ -231,7 +231,7 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 570px;
+	height: 600px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -252,14 +252,14 @@ button.fight {
 
 .row3{
 	float: left;
-	padding-left: 180px;
+	padding-left: 265px;
 	text-align: right;
 	margin-top: 1%;
 }
 
 .row4{
 	float: right;
-	padding-right: 180px;
+	padding-right: 265px;
 	text-align: left;
 	margin-top: 1%;
 }
