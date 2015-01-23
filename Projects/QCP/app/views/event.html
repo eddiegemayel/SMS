@@ -93,26 +93,30 @@
 			Multiplied by 100 to show the true percent
 			also added "Number : 2" to decrease the amount of digits after the decimal point to appear
 		-->
-		<h3><span class="special">{{redFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 2}}%</span> : Jones| --</h3>
-		<h3><span class="special">{{redFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 2}}%</span> : Diaz| --</h3>
-		<h3><span class="special">{{redFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 2}}%</span> : Overeem| --</h3>
-		<h3><span class="special">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 2}}%</span> : Aldo|  <span class="red">LI</span></h3>
+		<h3><span class="special">{{redFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> : Jones| --</h3>
+		<h3><span class="special">{{redFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> : Diaz| --</h3>
+		<h3><span class="special">{{redFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> : Overeem| --</h3>
+		<h3><span class="special">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  <span class="red">LI</span></h3>
 	</div>
 
 		<!-- another row of fighter pick results -->
 	<div class="row4">
-		<h3>-- |Cormier : <span class="special">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 2}}%</span> </h3>
-		<h3>-- |Silva : <span class="special">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 2}}%</span> </h3>
-		<h3>-- |Browne : <span class="special">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 2}}%</span> </h3>
-		<h3><span class="red">VE</span> |Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 2}}%</span></h3>
+		<h3>-- |Cormier : <span class="special">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> </h3>
+		<h3>-- |Silva : <span class="special">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> </h3>
+		<h3>-- |Browne : <span class="special">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> </h3>
+		<h3><span class="red">VE</span> |Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
 	</div>
 
 	</div>
 <!-- loops thru and shows every jon jones result, i.e tko, sub, dec 
-	THIS IS VERY IMPORTANT
-	<div class="yo" ng-repeat="red in redFight1">
-			<p>jj{{red.result}}</p>
-	</div> -->
+	{{test1[0].result}}
+	THIS IS VERY IMPORTANT-->
+	<div ng-controller="test" >
+		{{test1}}
+		<div ng-repeat="red in redFight1" ng-if="red.result='dec'">
+			<p>{{red.result}} - {{$index}} </p>
+		</div>
+	</div> 
 </div>
 </div>
 

@@ -123,6 +123,15 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 	}
 }]);
 
+app.controller('test', ['$scope', '$firebase', function ($scope, $firebase){
+		var url = "https://quickclickpicks.firebaseio.com/redFight1";
+ 		//new reference variable, passing url in
+ 		var ref = new Firebase(url);
+ 		//connected to database
+		$scope.test1 = $firebase(ref).$asArray();
+		console.log($scope.test1);
+}]);
+
 //TWITTER LOGIN FUNCTION
 //not sure why it is app.run
 //but you have to pass in firebaseauth, firebase, and rootscope to this twitter login function
