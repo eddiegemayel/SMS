@@ -68,6 +68,17 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 		//add pick to database
 		$scope.blueFight2.$add($scope.blue2);
 	}
+
+	// $scope.voteFight2 = function(){
+	// 	var url = "https://quickclickpicks.firebaseio.com/fight2";
+
+	// 	var ref = new Firebase(url);
+
+	// 	$scope.fight2 = $firebase(ref).$asArray();
+
+	// 	$scope.fight2.$add($sc);
+	// }
+
 	$scope.voteRed3 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight3";
  		//new reference variable, passing url in
@@ -210,7 +221,7 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	$scope.messages = $firebase(ref1).$asArray();
 
 	//send message function in chatroom
-	$scope.sendMessage = function($scope){
+	$scope.sendMessage = function(){
 
 		//as long as twitter username is defined
 		if($scope.user.twitter.username && $scope.user.twitter.username != " " || $scope.user.twitter.username != undefined){

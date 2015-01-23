@@ -134,8 +134,8 @@ button.fight {
 
 /*Front page call to action*/
 .happeningNow{
-	height: 300px;
-	width: 570px;
+	height: 400px;
+	width: 590px;
 	border: 2px solid #939191;
 	float: left;
 	margin-left: 5%;
@@ -144,8 +144,13 @@ button.fight {
 	background-color: #F6F7F7;
 }
 
+.now{
+	padding-left: 3%;
+}
+
 .pickNow{
 	float:right;
+	margin-right: 2%;
 }
 
 #picknow{
@@ -197,7 +202,7 @@ button.fight {
 /*Upcoming fights*/
 .upcoming{
 	border: 2px solid #939191;
-	height:600px;
+	height:520px;
 	width: 600px;
 	float: right;
 	clear: right;
@@ -205,6 +210,7 @@ button.fight {
 	margin-right: 5%;
 	margin-top: 2%;
 	background-color: #F6F7F7;
+	margin-bottom: 9%;
 }
 
 .floatRight{
@@ -232,11 +238,12 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 600px;
+	height: 710px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
 	margin-top: 2%;
+	margin-bottom: 9%;
 	padding: 10px;
 	background-color: #F6F7F7;
 }
@@ -253,16 +260,18 @@ button.fight {
 
 .row3{
 	float: left;
-	padding-left: 265px;
+	padding-left: 179px;
 	text-align: right;
 	margin-top: 1%;
+	padding-bottom: 5px;
 }
 
 .row4{
 	float: right;
-	padding-right: 265px;
+	padding-right: 179px;
 	text-align: left;
 	margin-top: 1%;
+	padding-bottom: 5px;
 }
 
 .fight1form{
@@ -284,6 +293,16 @@ button.fight {
 .blueChoice{
 	color: white;
 	background-color: #2C37B7;
+}
+
+/*Live Results area*/
+
+.results{
+	margin-top: 40px;
+}
+
+.red{
+	color: #BA2F2B;
 }
 
 
@@ -416,11 +435,54 @@ button.fight {
 
 /*Login */
 .loginContainer{
-	height: 350px;
-	width: 300px;
-	padding: 5px;
+	height: 300px;
+	width: 570px;
 	border: 2px solid #939191;
 	float: left;
 	margin-left: 5%;
+	margin-top: 2%;
+	padding: 10px;
 	background-color: #F6F7F7;
+}
+
+.loginTwitter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#6dd4db 0%,
+		#4d63f7);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#6dd4db),
+		to(#4d63f7));
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	border: 2px solid #ffffff;
+	-moz-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.1),
+		inset 0px 0px 1px rgba(12,15,15,1);
+	-webkit-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.1),
+		inset 0px 0px 1px rgba(12,15,15,1);
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0.1),
+		inset 0px 0px 1px rgba(12,15,15,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.1),
+		0px 1px 0px rgba(255,255,255,0);
+}
+
+.loginTwitter:hover{
+	background: -moz-linear-gradient(
+		top,
+		#60f7ef 0%,
+		#4d63f7));
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#60f7ef),
+		to(#4d63f7)));
 }
