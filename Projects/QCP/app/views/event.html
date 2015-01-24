@@ -80,6 +80,7 @@
 		
 	</div>
 
+	<!-- Lower area where result details are shown -->
 	<div class="results">
 	<!-- Live percentage vote results -->
 	<h2>Live Pick Results</h2>
@@ -107,16 +108,135 @@
 		<h3><span class="red">VE</span> |Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
 	</div>
 
+	<h3>Results Breakdown</h3>
+		<div ng-controller="breakdown" >
+			<!-- Jones  -->
+			<div ng-repeat="red in filter1 = (fight1Red | filter:'tko')">
+			</div>
+			<div ng-repeat="red in filter2 = (fight1Red | filter:'sub')">
+			</div>
+			<div ng-repeat="red in filter3 = (fight1Red | filter:'dec')">
+			</div>	
+			<!-- Cormier -->
+			<div ng-repeat="blue in filter4 = (fight1Blue | filter:'tko')">
+			</div>
+			<div ng-repeat="blue in filter5 = (fight1Blue | filter:'sub')">
+			</div>
+			<div ng-repeat="blue in filter6 = (fight1Blue | filter:'dec')">
+			</div>
+
+			<!-- Diaz -->
+			<div ng-repeat="red in filter7 = (fight2Red | filter:'tko')">
+			</div>
+			<div ng-repeat="red in filter8 = (fight2Red | filter:'sub')">
+			</div>
+			<div ng-repeat="red in filter9 = (fight2Red | filter:'dec')">
+			</div>
+
+			<!-- Silva -->
+			<div ng-repeat="blue in filter10 = (fight2Blue | filter:'tko')">
+			</div>
+			<div ng-repeat="blue in filter11 = (fight2Blue | filter:'sub')">
+			</div>
+			<div ng-repeat="blue in filter12 = (fight2Blue | filter:'dec')">
+			</div>
+
+			<!-- Overeem -->
+			<div ng-repeat="red in filter13 = (fight3Red | filter:'tko')">
+			</div>
+			<div ng-repeat="red in filter14 = (fight3Red | filter:'sub')">
+			</div>
+			<div ng-repeat="red in filter15 = (fight3Red | filter:'dec')">
+			</div>
+
+			<!-- Browne -->
+			<div ng-repeat="blue in filter16 = (fight3Blue | filter:'tko')">
+			</div>
+			<div ng-repeat="blue in filter17 = (fight3Blue | filter:'sub')">
+			</div>
+			<div ng-repeat="blue in filter18 = (fight3Blue | filter:'dec')">
+			</div>
+
+			<!-- Aldo -->
+			<div ng-repeat="red in filter19 = (fight4Red | filter:'tko')">
+			</div>
+			<div ng-repeat="red in filter20 = (fight4Red | filter:'sub')">
+			</div>
+			<div ng-repeat="red in filter21 = (fight4Red | filter:'dec')">
+			</div>
+
+			<!-- Mcgregor -->
+			<div ng-repeat="blue in filter22 = (fight4Blue | filter:'tko')">
+			</div>
+			<div ng-repeat="blue in filter23 = (fight4Blue | filter:'sub')">
+			</div>
+			<div ng-repeat="blue in filter24 = (fight4Blue | filter:'dec')">
+			</div>
+
+			<div class="breakdownLeft">
+				<div class="details">
+				<!-- Jones -->
+				<p><span class="special">{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via (T)KO</p>
+				<p><span class="special">{{filter2.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Submission</p>
+				<p><span class="special">{{filter3.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Decision</p>
+				</div>
+
+				<div class="details">
+				<!-- Diaz -->
+				<p><span class="special">{{filter7.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via (T)KO</p>
+				<p><span class="special">{{filter8.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Submission</p>
+				<p><span class="special">{{filter9.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Decision</p>
+				</div>
+
+				<div class="details">
+				<!-- Overeem -->
+				<p><span class="special">{{filter13.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via (T)KO</p>
+				<p><span class="special">{{filter14.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Submission</p>
+				<p><span class="special">{{filter15.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Decision</p>
+				</div>
+
+				<div class="details">
+				<!-- Aldo -->
+				<p><span class="special">{{filter19.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via (T)KO</p>
+				<p><span class="special">{{filter20.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Submission</p>
+				<p><span class="special">{{filter21.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Decision</p>
+				</div>
+				
+			</div>
+
+			<div class="breakdownRight">
+				<div class="details">
+				<!-- Cormier -->
+				<p>Cormier via (T)KO : <span class="special">{{filter4.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}% </span></p>
+				<p>Cormier via Submission : <span class="special">{{filter5.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span> </p>
+				<p>Cormier via Decision : <span class="special">{{filter6.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span></p>
+				</div>
+
+				<div class="details">
+				<!-- Silva -->
+				<p>Silva via (T)KO : <span class="special">{{filter10.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				<p>Silva via Submission : <span class="special">{{filter11.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				<p>Silva via Decision : <span class="special">{{filter12.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				</div>
+
+				<div class="details">
+				<!-- Browne -->
+				<p>Browne via (T)KO : <span class="special">{{filter16.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				<p>Browne via Submission : <span class="special">{{filter17.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				<p>Browne via Decision : <span class="special">{{filter18.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				</div>
+
+				<div class="details">
+				<!-- Mcgregor -->
+				<p>Mcgregor via (T)KO : <span class="special">{{filter22.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				<p>Mcgregor via Submission : <span class="special">{{filter23.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				<p>Mcgregor via Decision : <span class="special">{{filter24.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				</div>
+			</div>
+		</div> 
+
 	</div>
-<!-- loops thru and shows every jon jones result, i.e tko, sub, dec 
-	{{test1[0].result}}
-	THIS IS VERY IMPORTANT-->
-	<div ng-controller="test" >
-		{{test1}}
-		<div ng-repeat="red in redFight1" ng-if="red.result='dec'">
-			<p>{{red.result}} - {{$index}} </p>
-		</div>
-	</div> 
+
 </div>
 </div>
 
@@ -137,25 +257,3 @@
 
 </div>
 </div>
-
-
-
-<!-- 
-tried to make it one button form
-
-<div class="fight2form">
-			<form  ng-controller="vote" ng-submit="voteFight2()">
-				<div class="redChoice">
-				<p><label><input ng-model="red2.result" type="radio" value="sub" />Submission</label></p>
-				<p><label><input ng-model="red2.result" type="radio" value="tko" />(T)KO</label></p>
-				<p><label><input ng-model="red2.result" type="radio" value="dec" />Decision</label></p>
-				
-				</div>
-				<div class="blueChoice">
-				<p><label><input type="radio" ng-model="blue2.result" value="sub" />Submission</label></p>
-				<p><label><input type="radio" ng-model="blue2.result" value="tko" />(T)KO</label></p>
-				<p><label><input type="radio" ng-model="blue2.result" value="dec" />Decision</label></p>
-				<p><button class="fight">Pick!</button></p>
-				</div>
-			</form>
-		</div> -->

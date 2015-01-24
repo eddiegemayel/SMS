@@ -22,6 +22,21 @@ app.config(['$routeProvider', function($routeProvider){
 		});
 }]);
 
+
+//home index controller
+app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
+	//store firebase database URL
+	var url = "https://quickclickpicks.firebaseio.com/users";
+
+	//open connection
+	var ref = new Firebase(url);
+
+	//passes connection to angular fire
+	//you have to specificly tell it is an array, or an object
+	$scope.users = $firebase(ref).$asArray();
+
+}]);
+
 //controller that allows each ng-model to vote
 app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 	//add vote functions
@@ -69,16 +84,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 		$scope.blueFight2.$add($scope.blue2);
 	}
 
-	// $scope.voteFight2 = function(){
-	// 	var url = "https://quickclickpicks.firebaseio.com/fight2";
-
-	// 	var ref = new Firebase(url);
-
-	// 	$scope.fight2 = $firebase(ref).$asArray();
-
-	// 	$scope.fight2.$add($sc);
-	// }
-
 	$scope.voteRed3 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight3";
  		//new reference variable, passing url in
@@ -117,19 +122,89 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.blueFight4 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blue4);
+		console.log("Blue corner via "+$scope.blueFight4);
 		//add pick to database
 		$scope.blueFight4.$add($scope.blue4);
 	}
 }]);
 
-app.controller('test', ['$scope', '$firebase', function ($scope, $firebase){
-		var url = "https://quickclickpicks.firebaseio.com/redFight1";
+app.controller('breakdown', ['$scope', '$firebase', function ($scope, $firebase){
+
+		var url1 = "https://quickclickpicks.firebaseio.com/redFight1";
  		//new reference variable, passing url in
- 		var ref = new Firebase(url);
+ 		var ref1 = new Firebase(url1);
  		//connected to database
-		$scope.test1 = $firebase(ref).$asArray();
-		console.log($scope.test1);
+		var fight1Red = $firebase(ref1).$asArray();
+
+		//store it in scope
+		$scope.fight1Red = fight1Red;
+
+		var url2 = "https://quickclickpicks.firebaseio.com/blueFight1";
+ 		//new reference variable, passing url in
+ 		var ref2 = new Firebase(url2);
+ 		//connected to database
+		var fight1Blue = $firebase(ref2).$asArray();
+
+		//store it in scope
+		$scope.fight1Blue = fight1Blue;
+
+
+		var url3 = "https://quickclickpicks.firebaseio.com/redFight2";
+ 		//new reference variable, passing url in
+ 		var ref3 = new Firebase(url3);
+ 		//connected to database
+		var fight2Red = $firebase(ref3).$asArray();
+
+		//store it in scope
+		$scope.fight2Red = fight2Red;
+
+		var url4 = "https://quickclickpicks.firebaseio.com/blueFight2";
+ 		//new reference variable, passing url in
+ 		var ref4 = new Firebase(url4);
+ 		//connected to database
+		var fight2Blue = $firebase(ref4).$asArray();
+
+		//store it in scope
+		$scope.fight2Blue = fight2Blue;
+
+		var url5 = "https://quickclickpicks.firebaseio.com/redFight3";
+ 		//new reference variable, passing url in
+ 		var ref5 = new Firebase(url5);
+ 		//connected to database
+		var fight3Red = $firebase(ref5).$asArray();
+
+		//store it in scope
+		$scope.fight3Red = fight3Red;
+
+		var url6 = "https://quickclickpicks.firebaseio.com/blueFight3";
+ 		//new reference variable, passing url in
+ 		var ref6 = new Firebase(url6);
+ 		//connected to database
+		var fight3Blue = $firebase(ref6).$asArray();
+
+		//store it in scope
+		$scope.fight3Blue = fight3Blue;
+
+		var url7 = "https://quickclickpicks.firebaseio.com/redFight4";
+ 		//new reference variable, passing url in
+ 		var ref7 = new Firebase(url7);
+ 		//connected to database
+		var fight4Red = $firebase(ref7).$asArray();
+
+		//store it in scope
+		$scope.fight4Red = fight4Red;
+
+		var url8 = "https://quickclickpicks.firebaseio.com/blueFight4";
+ 		//new reference variable, passing url in
+ 		var ref8 = new Firebase(url8);
+ 		//connected to database
+		var fight4Blue = $firebase(ref8).$asArray();
+
+		//store it in scope
+		$scope.fight4Blue = fight4Blue;
+
+
+		
 }]);
 
 //TWITTER LOGIN FUNCTION
@@ -167,26 +242,6 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 			$rootScope.userloggedin.username = $rootScope.user.twitter.username;
     	}
   	});
-}]);
-
-//login controller
-app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {
-	//test code
-
-}]);
-
-//home index controller
-app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
-	//store firebase database URL
-	var url = "https://quickclickpicks.firebaseio.com/users";
-
-	//open connection
-	var ref = new Firebase(url);
-
-	//passes connection to angular fire
-	//you have to specificly tell it is an array, or an object
-	$scope.users = $firebase(ref).$asArray();
-
 }]);
 
 //event page controller
@@ -248,5 +303,12 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 		//empty message inputs
 		$scope.newMessage = {};
 	}
+
+}]);
+
+
+//login controller
+app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {
+	//test code
 
 }]);
