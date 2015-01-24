@@ -47,7 +47,7 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		//connected to database
 		$scope.redFight1 = $firebase(ref).$asArray();
 		//console log for fun
-		console.log("Red corner via " +$scope.red1.result);
+		// console.log("Red corner via " +$scope.red1.result);
 		//add pick to database
 		$scope.redFight1.$add($scope.red1);
 	}
@@ -57,8 +57,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.blueFight1 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blue1.result);
-
 		//add pick to database
 		$scope.blueFight1.$add($scope.blue1);
 	}
@@ -68,8 +66,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.redFight2 = $firebase(ref).$asArray();
-		//console log for fun
-		console.log("Red corner via " +$scope.red2);
 		//add pick to database
 		$scope.redFight2.$add($scope.red2);
 	}
@@ -79,7 +75,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.blueFight2 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blue2);
 		//add pick to database
 		$scope.blueFight2.$add($scope.blue2);
 	}
@@ -90,8 +85,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.redFight3 = $firebase(ref).$asArray();
-		//console log for fun
-		console.log("Red corner via " +$scope.red3);
 		//add pick to database
 		$scope.redFight3.$add($scope.red3);
 	}
@@ -101,7 +94,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.blueFight3 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blue3);
 		//add pick to database
 		$scope.blueFight3.$add($scope.blue3);
 	}
@@ -111,8 +103,6 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.redFight4 = $firebase(ref).$asArray();
-		//console log for fun
-		console.log("Red corner via " +$scope.red4);
 		//add pick to database
 		$scope.redFight4.$add($scope.red4);
 	}
@@ -122,29 +112,33 @@ app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
  		var ref = new Firebase(url);
  		//connected to database
 		$scope.blueFight4 = $firebase(ref).$asArray();
-		console.log("Blue corner via "+$scope.blueFight4);
 		//add pick to database
 		$scope.blueFight4.$add($scope.blue4);
 	}
 }]);
 
+//controller for breakdown details part of html
 app.controller('breakdown', ['$scope', '$firebase', function ($scope, $firebase){
+		//a connection is made to firebase for each individual fighter
+		//i.e red corner of Fight1, blue corner of Fight2, etc.
+
+		//once each connection is made, it is passed into the scope for 
+		//reference in the html, where the math will be done for percentages.
 
 		var url1 = "https://quickclickpicks.firebaseio.com/redFight1";
  		//new reference variable, passing url in
  		var ref1 = new Firebase(url1);
  		//connected to database
 		var fight1Red = $firebase(ref1).$asArray();
-
 		//store it in scope
 		$scope.fight1Red = fight1Red;
+
 
 		var url2 = "https://quickclickpicks.firebaseio.com/blueFight1";
  		//new reference variable, passing url in
  		var ref2 = new Firebase(url2);
  		//connected to database
 		var fight1Blue = $firebase(ref2).$asArray();
-
 		//store it in scope
 		$scope.fight1Blue = fight1Blue;
 
@@ -154,57 +148,53 @@ app.controller('breakdown', ['$scope', '$firebase', function ($scope, $firebase)
  		var ref3 = new Firebase(url3);
  		//connected to database
 		var fight2Red = $firebase(ref3).$asArray();
-
 		//store it in scope
 		$scope.fight2Red = fight2Red;
+
 
 		var url4 = "https://quickclickpicks.firebaseio.com/blueFight2";
  		//new reference variable, passing url in
  		var ref4 = new Firebase(url4);
  		//connected to database
 		var fight2Blue = $firebase(ref4).$asArray();
-
 		//store it in scope
 		$scope.fight2Blue = fight2Blue;
+
 
 		var url5 = "https://quickclickpicks.firebaseio.com/redFight3";
  		//new reference variable, passing url in
  		var ref5 = new Firebase(url5);
  		//connected to database
 		var fight3Red = $firebase(ref5).$asArray();
-
 		//store it in scope
 		$scope.fight3Red = fight3Red;
+
 
 		var url6 = "https://quickclickpicks.firebaseio.com/blueFight3";
  		//new reference variable, passing url in
  		var ref6 = new Firebase(url6);
  		//connected to database
 		var fight3Blue = $firebase(ref6).$asArray();
-
 		//store it in scope
 		$scope.fight3Blue = fight3Blue;
+
 
 		var url7 = "https://quickclickpicks.firebaseio.com/redFight4";
  		//new reference variable, passing url in
  		var ref7 = new Firebase(url7);
  		//connected to database
 		var fight4Red = $firebase(ref7).$asArray();
-
 		//store it in scope
 		$scope.fight4Red = fight4Red;
+
 
 		var url8 = "https://quickclickpicks.firebaseio.com/blueFight4";
  		//new reference variable, passing url in
  		var ref8 = new Firebase(url8);
  		//connected to database
 		var fight4Blue = $firebase(ref8).$asArray();
-
 		//store it in scope
 		$scope.fight4Blue = fight4Blue;
-
-
-		
 }]);
 
 //TWITTER LOGIN FUNCTION
@@ -287,15 +277,16 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	//send message function in chatroom
 	$scope.sendMessage = function(){
 
-		//as long as twitter username is defined
-		if($scope.user.twitter.username && $scope.user.twitter.username != " " || $scope.user.twitter.username != undefined){
-			//signed author in chatroom as twitter username
-			$scope.newMessage.author = "@"+ $scope.user.twitter.username;
+		//if twitter user is not logged in
+		if($scope.user == undefined){
+			//make them guest
+			$scope.newMessage.author = "Guest";
 			//add function
 			$scope.messages.$add($scope.newMessage);
+			
 		}else{
-			//otherwise make them guest
-			$scope.newMessage.author = "Guest";
+			//signed author in chatroom as twitter username
+			$scope.newMessage.author = "@"+ $scope.user.twitter.username;
 			//add function
 			$scope.messages.$add($scope.newMessage);
 		}
@@ -305,7 +296,6 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 	}
 
 }]);
-
 
 //login controller
 app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {

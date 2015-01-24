@@ -3,14 +3,14 @@
 <h2>UFC 182</h2>
 <h3>January 1, 2015</h3>
 <div class="eventContainer">
-	<!-- row of fights -->
+	<!-- Row of fights -->
 	<div class="row1">
+		<!-- Fight forms to vote -->
 		<div class="fight1form">
 			<form class="redChoice" ng-controller="vote" ng-submit="voteRed1()">
 				<p><label><input ng-model="red1.result" type="radio" value="sub" />Submission</label></p>
 				<p><label><input ng-model="red1.result" type="radio" value="tko" />(T)KO</label></p>
 				<p><label><input ng-model="red1.result" type="radio" value="dec" />Decision</label></p>
-				<!-- <p>{{red1}}</p> -->
 				<p><button class="fight">Pick!</button></p>
 			</form>
 			<form class="blueChoice" ng-controller="vote" ng-submit="voteBlue1()">
@@ -108,8 +108,22 @@
 		<h3><span class="red">VE</span> |Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
 	</div>
 
-	<h3>Results Breakdown</h3>
-		<div ng-controller="breakdown" >
+	<!-- Breakdown Area Begins -->
+	
+		<div ng-controller="breakdown" class="breakdownContainer" >
+			<!-- Each of these divs do not show, because nothing is in them. 
+				Each div has an ng-repeat, looping thru each fight pick array
+				Every ng-repeat has a filter, filtering results, e.i tko, submission, decision
+				
+				I will explain this peice of code
+				ng-repeat="red in filter1 = (fight1Red | filter:'tko')"
+
+				I am saying, repeat red in the array fight1Red (which was created in the breakdown controller in main.js)
+				with the filter of tko. Anything else that has 'sub' or 'dec', get put into filter1, which
+				is an array i call later, down below.
+
+				-->
+
 			<!-- Jones  -->
 			<div ng-repeat="red in filter1 = (fight1Red | filter:'tko')">
 			</div>
@@ -117,6 +131,7 @@
 			</div>
 			<div ng-repeat="red in filter3 = (fight1Red | filter:'dec')">
 			</div>	
+
 			<!-- Cormier -->
 			<div ng-repeat="blue in filter4 = (fight1Blue | filter:'tko')">
 			</div>
@@ -173,7 +188,27 @@
 			<div ng-repeat="blue in filter24 = (fight4Blue | filter:'dec')">
 			</div>
 
+			<!-- The actual part the user sees -->
+			<h3>Results Breakdown</h3>
 			<div class="breakdownLeft">
+
+				<!-- I now call the filters that were made above, down here. 
+					I will explain what's happening in this bit of code.
+
+					{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}% : Jones via (T)KO
+
+					Im saying, filter1.length (which is the tko filter for jon jones) 
+					divided by the other three jon jones filters added together, times 100.
+
+					this is finding the percent that believes jon will win via tko.
+
+					the number:1 attribute just makes sure that only 1 digit is repeated after the decimal point, so numbers
+					dont get long and annoying.
+
+					This is done for every fighter, depending on filter.
+
+					-->
+
 				<div class="details">
 				<!-- Jones -->
 				<p><span class="special">{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via (T)KO</p>

@@ -238,7 +238,7 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 1020px;
+	height: 1030px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -309,15 +309,21 @@ button.fight {
 	float: left;
 	padding-left: 180px;
 	text-align: right;
+	margin-top: 33px;
 }
 .breakdownRight{
 	float: right;
 	padding-right:180px;
+	margin-top: 33px;
 }
 
 .details{
 	padding-top: 10px;
 	margin-top: 10px;
+}
+
+.breakdownContainer{
+	margin-top: 70px;
 }
 
 
