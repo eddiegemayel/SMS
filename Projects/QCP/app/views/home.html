@@ -9,7 +9,12 @@
 		<h5>Select whatever combat sports event is currently live</h5>
 		<h5>and select which corner, red or blue, you think is going to win the fight.</h5>
 		<h5>See who in the world agrees or disagrees with your predictions!</h5>
-		<h5 ng-model="userloggedin.username">You're currently signed in as twitter user @{{user.twitter.username}}</h5>
+		<div ng-if="user.twitter.username">
+			<h5 ng-model="userloggedin.username">You're currently signed in as twitter user @{{user.twitter.username}}</h5>
+		</div>
+		<div ng-if="user.twitter.username == undefined || user.twitter.username = ''">
+			<h5>You're not signed in! <a ng-click="authObj.$authWithOAuthPopup('twitter')">Sign in via Twitter</a>.</h5>
+		</div>
 	</div>
 </div>
 

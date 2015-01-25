@@ -84,8 +84,9 @@
 	<div class="results">
 	<!-- Live percentage vote results -->
 	<h2>Live Pick Results</h2>
+		<h3>General</h3>
 		<!-- Calculates total number of votes by adding them all together -->
-		<h3><span class="special">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> votes</h3>
+		<h4><span class="special">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> votes</h4>
 
 	<!-- row of fighter pick results -->
 	<div class="row3">
@@ -113,14 +114,14 @@
 		<div ng-controller="breakdown" class="breakdownContainer" >
 			<!-- Each of these divs do not show, because nothing is in them. 
 				Each div has an ng-repeat, looping thru each fight pick array
-				Every ng-repeat has a filter, filtering results, e.i tko, submission, decision
+				Every ng-repeat has a filter, filtering specific results, i.e tko, submission, decision
 				
 				I will explain this peice of code
 				ng-repeat="red in filter1 = (fight1Red | filter:'tko')"
 
 				I am saying, repeat red in the array fight1Red (which was created in the breakdown controller in main.js)
-				with the filter of tko. Anything else that has 'sub' or 'dec', get put into filter1, which
-				is an array i call later, down below.
+				with the filter of 'tko'. Anything else that has 'sub' or 'dec', get put into filter1, which
+				is an array i call later, down below, to calculate the percentage of people who thought Jones would win via TKO
 
 				-->
 
@@ -189,7 +190,7 @@
 			</div>
 
 			<!-- The actual part the user sees -->
-			<h3>Pick Breakdown</h3>
+			<h3>Breakdown</h3>
 			<div class="breakdownLeft">
 
 				<!-- I now call the filters that were made above, down here. 
@@ -268,9 +269,10 @@
 				<p>Mcgregor via Decision : <span class="special">{{filter24.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
 				</div>
 			</div>
-		</div> 
 
-	</div>
+		</div><!-- end of breakdown container --> 
+
+	</div><!-- end of results div -->
 
 </div>
 </div>

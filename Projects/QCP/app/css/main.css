@@ -18,10 +18,6 @@ body{
 	background-color:#FDFBEC;
 }
 
-p{
-	font-family: 'Slabo 27px', serif;
-}
-
 header{
 	margin-top: 0;
 	height: 120px;
@@ -42,6 +38,10 @@ h1{
 
 h2{
 	font-size: 220%;
+}
+
+p{
+	font-family: 'Slabo 27px', serif;
 }
 
 a{
@@ -238,7 +238,7 @@ button.fight {
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 1030px;
+	height: 1050px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -324,6 +324,7 @@ button.fight {
 
 .breakdownContainer{
 	margin-top: 70px;
+	padding-top: 15px;
 }
 
 
@@ -506,4 +507,24 @@ button.fight {
 		linear, left top, left bottom,
 		from(#60f7ef),
 		to(#4d63f7)));
+}
+
+/*about section*/
+.about{
+	border: 2px solid #939191;
+	width:960px;
+	height: 360px;
+	float:left;
+	clear: left;
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 9%;
+	padding: 10px;
+	background-color: #F6F7F7;
+}
+
+.aboutContentContainer{
+	width:790px;
+	margin-left: 5%;
+	margin-right: auto;
 }
