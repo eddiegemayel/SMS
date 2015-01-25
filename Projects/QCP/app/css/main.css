@@ -202,7 +202,7 @@ button.fight {
 /*Upcoming fights*/
 .upcoming{
 	border: 2px solid #939191;
-	height:520px;
+	height:480px;
 	width: 600px;
 	float: right;
 	clear: right;
