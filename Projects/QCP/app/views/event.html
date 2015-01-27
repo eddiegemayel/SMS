@@ -202,6 +202,7 @@
 
 				<!-- I now call the filters that were made above, down here. 
 					I will explain what's happening in this bit of code.
+					Since I know I will forget next time i check this code out
 
 					{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}% : Jones via (T)KO
 
@@ -287,6 +288,13 @@
 <!-- Chatroom -->
 <div class="chatContainer">
 <h2>Chatroom</h2>
+<!-- If you are not logged in, a link will appear to prompt you to log in -->
+<div ng-if="user.twitter.username">
+	<h5 ng-model="userloggedin.username">You're currently signed in as @{{user.twitter.username}}</h5>
+</div>
+<div ng-if="user.twitter.username == undefined || user.twitter.username == '' || !user.twitter.username">
+	<h5>You're a 'Guest' right now! <a ng-click="authObj.$authWithOAuthPopup('twitter')">Sign in via Twitter</a>.</h5>
+</div>
 <h3><span class="highlight">{{messages.length}}</span> messages</h3>
 <div class="chatroom">
 	<!-- where messages from the database are fetched and displayed -->

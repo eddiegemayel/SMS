@@ -1,0 +1,9 @@
+{
+  "firebase": "quickclickpicks",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

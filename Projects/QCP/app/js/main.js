@@ -40,6 +40,9 @@ app.controller('home', ['$scope', '$firebase', function($scope, $firebase){
 //controller that allows each ng-model to vote
 app.controller("vote", ['$scope', "$firebase", function($scope, $firebase){
 	//add vote functions
+	//for each corner and each fight
+	//theres a lot of em
+
 	$scope.voteRed1 = function(){
 		var url = "https://quickclickpicks.firebaseio.com/redFight1";
  		//new reference variable, passing url in
@@ -198,7 +201,7 @@ app.controller('breakdown', ['$scope', '$firebase', function ($scope, $firebase)
 }]);
 
 //TWITTER LOGIN FUNCTION
-//not sure why it is app.run
+//not sure why it has to be app.run
 //but you have to pass in firebaseauth, firebase, and rootscope to this twitter login function
 app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $firebase, $firebaseAuth) {
 	//store URL in variable
@@ -217,19 +220,19 @@ app.run(['$rootScope', '$firebase', '$firebaseAuth', function ($rootScope, $fire
 
     	//if the data exists
     	if(data){
-			var url = 'https://quickclickpicks.firebaseio.com/users/'+data.uid;
-			var ref = new Firebase(url);
+    		//firebase auth them
+			var url2 = 'https://quickclickpicks.firebaseio.com/users/'+data.uid;
+			var ref2 = new Firebase(url2);
 
+		
 			//put user in object
 			$rootScope.user = data;
 
-			// $rootScope.data = data.twitter.username;
-
-			// $rootScope.user.$add($rootScope.data);
-
-			//console logs twitter username
-			// console.log("yo",$rootScope.user.twitter.username);
+			//pass the variable into the scope
 			$rootScope.userloggedin.username = $rootScope.user.twitter.username;
+
+			$rootScope.users = $firebase(ref2).$asArray();
+			$rootScope.users.$add($rootScope.user.twitter.username);
     	}
   	});
 }]);
