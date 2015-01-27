@@ -54,22 +54,23 @@ a{
 
 
 /*index.html Main Header---------------------------------------------------------------------------------------------------------------*/
-.title{
-	vertical-align: middle;
-	text-align: center;
-	padding-top: 30px;
-	clear: both;
+#logo{
+	margin-left: 380px;
+	padding: 0;
 }
+
 
 /*Navigation---------------------------------------------------------------------------------------------------------------*/
 .leftNav{
 	float: left;
 	margin-left: 1%;
+	margin-top: 6%;
 }
 
 .rightNav{
 	float: right;
 	margin-right: 1%;
+	margin-top: 6%;
 }
 
 
@@ -87,9 +88,8 @@ a{
 	margin-left: 6%;
 }
 
-.signedIn{
+.summary{
 	float: right;
-	/*margin-left: 2%;*/
 	margin-right: 30%;
 }
 
@@ -98,7 +98,7 @@ a{
 .happeningNow{
 	height: 400px;
 	width: 610px;
-	border: 2px solid #939191;
+	border: 1px solid #939191;
 	float: left;
 	margin-left: 5%;
 	margin-top: 2%;
@@ -120,7 +120,7 @@ a{
 
 /*Upcoming fights---------------------------------------------------------------------------------------------------------------*/
 .upcoming{
-	border: 2px solid #939191;
+	border: 1px solid #939191;
 	height:480px;
 	width: 600px;
 	float: right;
@@ -155,7 +155,7 @@ a{
 
 /*Event area---------------------------------------------------------------------------------------------------------------*/
 .event{
-	border: 2px solid #939191;
+	border: 1px solid #939191;
 	width:800px;
 	height: 1150px;
 	float:left;
@@ -251,7 +251,7 @@ a{
 
 /* Chatroom area---------------------------------------------------------------------------------------------------------------  */
 .chatContainer{
-	border: 2px solid #939191;
+	border: 1px solid #939191;
 	height: 550px;
 	width: 405px;
 	float: right;
@@ -285,7 +285,7 @@ a{
 
 /*about section---------------------------------------------------------------------------------------------------------------*/
 .about{
-	border: 2px solid #939191;
+	border: 1px solid #939191;
 	width:960px;
 	height: 360px;
 	float:left;
