@@ -86,7 +86,7 @@
 	<h2>Live Pick Results</h2>
 		<h3>The General Consensus From </h3>
 		<!-- Calculates total number of votes by adding them all together -->
-		<h4><span class="special">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> votes</h4>
+		<h4><span class="highlight">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> votes</h4>
 
 	<!-- row of fighter pick results -->
 	<div class="row3">
@@ -95,18 +95,22 @@
 			Multiplied by 100 to show the true percent
 			also added "Number : 2" to decrease the amount of digits after the decimal point to appear
 		-->
-		<h3><span class="special">{{redFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> : Jones| --</h3>
-		<h3><span class="special">{{redFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> : Diaz| --</h3>
-		<h3><span class="special">{{redFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> : Overeem| --</h3>
-		<h3><span class="special">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  <span class="red">LI</span></h3>
+
+		<!-- 
+			ng-class to highlight who is winning in votes
+		-->
+		<h3><span ng-class="{'highlight':(redFight1.length / (redFight1.length + blueFight1.length) * 100) > 50}">{{redFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> : Jones| --</h3>
+		<h3><span ng-class="{'highlight':(redFight2.length / (redFight2.length + blueFight2.length) * 100) > 50}">{{redFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> : Diaz| --</h3>
+		<h3><span ng-class="{'highlight':(redFight3.length / (redFight3.length + blueFight3.length) * 100) > 50}">{{redFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> : Overeem| --</h3>
+		<h3><span ng-class="{'highlight':(redFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  <span class="red">LI</span></h3>
 	</div>
 
 		<!-- another row of fighter pick results -->
 	<div class="row4">
-		<h3>-- |Cormier : <span class="special">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> </h3>
-		<h3>-- |Silva : <span class="special">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> </h3>
-		<h3>-- |Browne : <span class="special">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> </h3>
-		<h3><span class="red">VE</span> |Mcgregor : <span class="special">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
+		<h3>-- |Cormier : <span ng-class="{'highlight':(blueFight1.length / (redFight1.length + blueFight1.length) * 100) > 50}">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> </h3>
+		<h3>-- |Silva : <span ng-class="{'highlight':(blueFight2.length / (redFight2.length + blueFight2.length) * 100) > 50}">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> </h3>
+		<h3>-- |Browne : <span ng-class="{'highlight':(blueFight3.length / (redFight3.length + blueFight3.length) * 100) > 50}">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> </h3>
+		<h3><span class="red">VE</span> |Mcgregor : <span ng-class="{'highlight':(blueFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
 	</div>
 
 	<!-- Breakdown Area Begins -->
@@ -212,30 +216,30 @@
 
 				<div class="details">
 				<!-- Jones -->
-				<p><span class="special">{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via (T)KO</p>
-				<p><span class="special">{{filter2.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Submission</p>
-				<p><span class="special">{{filter3.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Decision</p>
+				<p><span ng-class="{'highlight':(filter1.length / (filter2.length + filter3.length + filter1.length) * 100) > 50}">{{filter1.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via (T)KO</p>
+				<p><span ng-class="{'highlight':(filter2.length / (filter2.length + filter3.length + filter1.length) * 100) > 50}">{{filter2.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Submission</p>
+				<p><span ng-class="{'highlight':(filter3.length / (filter2.length + filter3.length + filter1.length) * 100) > 50}">{{filter3.length / (filter2.length + filter3.length + filter1.length) * 100 | number: 1}}%</span> : Jones via Decision</p>
 				</div>
 
 				<div class="details">
 				<!-- Diaz -->
-				<p><span class="special">{{filter7.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via (T)KO</p>
-				<p><span class="special">{{filter8.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Submission</p>
-				<p><span class="special">{{filter9.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Decision</p>
+				<p><span ng-class="{'highlight':(filter7.length / (filter7.length + filter8.length + filter9.length) * 100) > 50}">{{filter7.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via (T)KO</p>
+				<p><span ng-class="{'highlight':(filter8.length / (filter7.length + filter8.length + filter9.length) * 100) > 50}">{{filter8.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Submission</p>
+				<p><span ng-class="{'highlight':(filter9.length / (filter7.length + filter8.length + filter9.length) * 100) > 50}">{{filter9.length / (filter7.length + filter8.length + filter9.length) * 100 | number: 1}}%</span> : Diaz via Decision</p>
 				</div>
 
 				<div class="details">
 				<!-- Overeem -->
-				<p><span class="special">{{filter13.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via (T)KO</p>
-				<p><span class="special">{{filter14.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Submission</p>
-				<p><span class="special">{{filter15.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Decision</p>
+				<p><span ng-class="{'highlight':(filter13.length / (filter13.length + filter14.length + filter15.length) * 100) > 50}">{{filter13.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via (T)KO</p>
+				<p><span ng-class="{'highlight':(filter14.length / (filter13.length + filter14.length + filter15.length) * 100) > 50}">{{filter14.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Submission</p>
+				<p><span ng-class="{'highlight':(filter15.length / (filter13.length + filter14.length + filter15.length) * 100) > 50}">{{filter15.length / (filter13.length + filter14.length + filter15.length) * 100 | number: 1}}%</span> : Overeem via Decision</p>
 				</div>
 
 				<div class="details">
 				<!-- Aldo -->
-				<p><span class="special">{{filter19.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via (T)KO</p>
-				<p><span class="special">{{filter20.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Submission</p>
-				<p><span class="special">{{filter21.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Decision</p>
+				<p><span ng-class="{'highlight':(filter19.length / (filter20.length + filter19.length + filter21.length) * 100) > 50}">{{filter19.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via (T)KO</p>
+				<p><span ng-class="{'highlight':(filter20.length / (filter20.length + filter19.length + filter21.length) * 100) > 50}">{{filter20.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Submission</p>
+				<p><span ng-class="{'highlight':(filter21.length / (filter2.length + filter19.length + filter21.length) * 100) > 50}">{{filter21.length / (filter19.length + filter20.length + filter21.length) * 100 | number: 1}}%</span> : Aldo via Decision</p>
 				</div>
 				
 			</div>
@@ -243,30 +247,30 @@
 			<div class="breakdownRight">
 				<div class="details">
 				<!-- Cormier -->
-				<p>Cormier via (T)KO : <span class="special">{{filter4.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}% </span></p>
-				<p>Cormier via Submission : <span class="special">{{filter5.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span> </p>
-				<p>Cormier via Decision : <span class="special">{{filter6.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span></p>
+				<p>Cormier via (T)KO : <span ng-class="{'highlight':(filter4.length / (filter4.length + filter5.length + filter6.length) * 100) > 50}">{{filter4.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}% </span></p>
+				<p>Cormier via Submission : <span ng-class="{'highlight':(filter5.length / (filter4.length + filter5.length + filter6.length) * 100) > 50}">{{filter5.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span> </p>
+				<p>Cormier via Decision : <span ng-class="{'highlight':(filter6.length / (filter4.length + filter5.length + filter6.length) * 100) > 50}">{{filter6.length / (filter4.length + filter5.length + filter5.length) * 100 | number : 1}}%</span></p>
 				</div>
 
 				<div class="details">
 				<!-- Silva -->
-				<p>Silva via (T)KO : <span class="special">{{filter10.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
-				<p>Silva via Submission : <span class="special">{{filter11.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
-				<p>Silva via Decision : <span class="special">{{filter12.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				<p>Silva via (T)KO : <span ng-class="{'highlight':(filter10.length / (filter12.length + filter10.length + filter11.length) * 100) > 50}">{{filter10.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				<p>Silva via Submission : <span ng-class="{'highlight':(filter11.length / (filter12.length + filter10.length + filter11.length) * 100) > 50}">{{filter11.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
+				<p>Silva via Decision : <span ng-class="{'highlight':(filter12.length / (filter12.length + filter10.length + filter11.length) * 100) > 50}">{{filter12.length / (filter10.length + filter11.length + filter12.length) * 100 | number: 1}}%</span></p>
 				</div>
 
 				<div class="details">
 				<!-- Browne -->
-				<p>Browne via (T)KO : <span class="special">{{filter16.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
-				<p>Browne via Submission : <span class="special">{{filter17.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
-				<p>Browne via Decision : <span class="special">{{filter18.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				<p>Browne via (T)KO : <span ng-class="{'highlight':(filter16.length / (filter16.length + filter17.length + filter18.length) * 100) > 50}">{{filter16.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				<p>Browne via Submission : <span ng-class="{'highlight':(filter17.length / (filter16.length + filter17.length + filter18.length) * 100) > 50}">{{filter17.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
+				<p>Browne via Decision : <span ng-class="{'highlight':(filter18.length / (filter16.length + filter17.length + filter18.length) * 100) > 50}">{{filter18.length / (filter16.length + filter17.length + filter18.length) * 100 | number: 1}}%</span></p>
 				</div>
 
 				<div class="details">
 				<!-- Mcgregor -->
-				<p>Mcgregor via (T)KO : <span class="special">{{filter22.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
-				<p>Mcgregor via Submission : <span class="special">{{filter23.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
-				<p>Mcgregor via Decision : <span class="special">{{filter24.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				<p>Mcgregor via (T)KO : <span ng-class="{'highlight':(filter22.length / (filter22.length + filter23.length + filter24.length) * 100) > 50}">{{filter22.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				<p>Mcgregor via Submission : <span ng-class="{'highlight':(filter23.length / (filter22.length + filter23.length + filter24.length) * 100) > 50}">{{filter23.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
+				<p>Mcgregor via Decision : <span ng-class="{'highlight':(filter24.length / (filter22.length + filter23.length + filter24.length) * 100) > 50}">{{filter24.length / (filter22.length + filter23.length + filter24.length) * 100 | number: 1}}%</span></p>
 				</div>
 			</div>
 
@@ -280,12 +284,12 @@
 <!-- Chatroom -->
 <div class="chatContainer">
 <h2>Chatroom</h2>
-<h3><span class="special">{{messages.length}}</span> messages</h3>
+<h3><span class="highlight">{{messages.length}}</span> messages</h3>
 <div class="chatroom">
 	<!-- where messages from the database are fetched and displayed -->
 	<div class="messageArea" ng-repeat="message in messages">
 		<p>{{message.body}} 
-			<strong><span class="special">- {{message.author}} </span></strong>
+			<strong><span class="highlight">- {{message.author}} </span></strong>
 			<!-- This delete button now only shows if you are logged in, and will only appear by messages you have sent -->
 			<button ng-model="userloggedin.username" ng-if="user.twitter.username && message.author == ('@'+user.twitter.username)" class="delete" ng-click="messages.$remove(message)">X</button>
 		</p> 

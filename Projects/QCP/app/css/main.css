@@ -48,6 +48,10 @@ a{
 	text-decoration: none;
 }
 
+.highlight{
+	color: #6DBE47;
+}
+
 
 /*index.html Main Header---------------------------------------------------------------------------------------------------------------*/
 .title{
@@ -274,10 +278,6 @@ a{
 .chatInput{
 	height:39px;
 	width: 345px;
-}
-
-.special{
-	color: #6DBE47;
 }
 
 
