@@ -1,4 +1,4 @@
-/*Colors
+/*Colors---------------------------------------------------------------------------------------------------------------
 #5163AD = blue
 #FDFBEC = yellow bg
 #6EBE46 = green
@@ -7,13 +7,13 @@
 #2C37B7 = blue
 */
 
-/*Reset*/
+/*Reset---------------------------------------------------------------------------------------------------------------*/
 *{
 	margin: 0;
 	padding:0;
 }
 
-/*normals*/
+/*normals---------------------------------------------------------------------------------------------------------------*/
 body{
 	background-color:#FDFBEC;
 }
@@ -48,50 +48,8 @@ a{
 	text-decoration: none;
 }
 
-button.fight {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #fdfbec;
-	padding: 4px 11px;
-	background: -moz-linear-gradient(
-		top,
-		#5163ad 0%,
-		#6884f7);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#5163ad),
-		to(#6884f7));
-	-moz-border-radius: 1px;
-	-webkit-border-radius: 1px;
-	border-radius: 1px;
-	border: 2px solid #1f2022;
-	-moz-box-shadow:
-		0px 1px 3px rgba(000,000,000,0),
-		inset 0px 0px 3px rgba(255,255,255,0.5);
-	-webkit-box-shadow:
-		0px 1px 3px rgba(000,000,000,0),
-		inset 0px 0px 3px rgba(255,255,255,0.5);
-	box-shadow:
-		0px 1px 3px rgba(000,000,000,0),
-		inset 0px 0px 3px rgba(255,255,255,0.5);
-	text-shadow:
-		0px -1px 0px rgba(000,000,000,0),
-		0px 1px 0px rgba(255,255,255,0);
-}
 
-.fight:hover{
-	background: -moz-linear-gradient(
-		top,
-		#96aafa 0%,
-		#5163ad);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#96aafa),
-		to(#5163ad));
-}
-
-
-/*index.html Main Header*/
+/*index.html Main Header---------------------------------------------------------------------------------------------------------------*/
 .title{
 	vertical-align: middle;
 	text-align: center;
@@ -99,7 +57,7 @@ button.fight {
 	clear: both;
 }
 
-/*Navigation*/
+/*Navigation---------------------------------------------------------------------------------------------------------------*/
 .leftNav{
 	float: left;
 	margin-left: 1%;
@@ -111,7 +69,7 @@ button.fight {
 }
 
 
-/*Top section home page*/
+/*Top section home page---------------------------------------------------------------------------------------------------------------*/
 .topSection{
 	padding: 25px;
 	height: 85px;
@@ -132,7 +90,7 @@ button.fight {
 }
 
 
-/*Front page call to action*/
+/*Front page call to action---------------------------------------------------------------------------------------------------------------*/
 .happeningNow{
 	height: 400px;
 	width: 610px;
@@ -153,53 +111,10 @@ button.fight {
 	margin-right: 2%;
 }
 
-#picknow{
-	width:150px;
-	height:240px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 21px;
-	color: #ffffff;
-	padding: 30px 8px;
-	background: -moz-linear-gradient(
-		top,
-		#6dbe47 0%,
-		#365c23);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#6dbe47),
-		to(#365c23));
-	-moz-border-radius: 1px;
-	-webkit-border-radius: 1px;
-	border-radius: 1px;
-	border: 4px solid #171717;
-	-moz-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 10px rgba(087,087,087,0.7);
-	-webkit-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 10px rgba(087,087,087,0.7);
-	box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px 0px 10px rgba(087,087,087,0.7);
-	text-shadow:
-		0px -1px 0px rgba(000,000,000,0.4),
-		0px 1px 0px rgba(255,255,255,0.3);
-}
-
-#picknow:hover{
-	background: -moz-linear-gradient(
-		top,
-		 #83e055 0%,
-		#6dbe47);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#83e055),
-		to(#6dbe47));
-	
-}
 
 
-/*Upcoming fights*/
+
+/*Upcoming fights---------------------------------------------------------------------------------------------------------------*/
 .upcoming{
 	border: 2px solid #939191;
 	height:480px;
@@ -234,7 +149,7 @@ button.fight {
 }
 
 
-/*Event area*/
+/*Event area---------------------------------------------------------------------------------------------------------------*/
 .event{
 	border: 2px solid #939191;
 	width:800px;
@@ -295,7 +210,7 @@ button.fight {
 	background-color: #2C37B7;
 }
 
-/*Live Results area*/
+/*Live Results area---------------------------------------------------------------------------------------------------------------*/
 
 .results{
 	margin-top: 40px;
@@ -328,7 +243,7 @@ button.fight {
 }
 
 
-/* Chatroom area  */
+/* Chatroom area---------------------------------------------------------------------------------------------------------------  */
 .chatContainer{
 	border: 2px solid #939191;
 	height: 550px;
@@ -353,14 +268,129 @@ button.fight {
 }
 
 .chatForm{
-	position: absolute;
-	right: 90px;
-	bottom:60px;
+	margin-top: 5px;
+}
+
+.chatInput{
+	height:39px;
+	width: 345px;
 }
 
 .special{
 	color: #6DBE47;
 }
+
+
+/*about section---------------------------------------------------------------------------------------------------------------*/
+.about{
+	border: 2px solid #939191;
+	width:960px;
+	height: 360px;
+	float:left;
+	clear: left;
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 9%;
+	padding: 10px;
+	background-color: #F6F7F7;
+}
+
+.aboutContentContainer{
+	width:790px;
+	margin-left: 5%;
+	margin-right: auto;
+}
+
+
+/*UGLY BUTTON CODE-------------------------------------------------------------------------------------------------------------------------*/
+
+#picknow{
+	width:150px;
+	height:240px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	color: #ffffff;
+	padding: 30px 8px;
+	background: -moz-linear-gradient(
+		top,
+		#6dbe47 0%,
+		#365c23);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#6dbe47),
+		to(#365c23));
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	border: 4px solid #171717;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 10px rgba(087,087,087,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+#picknow:hover{
+	background: -moz-linear-gradient(
+		top,
+		 #83e055 0%,
+		#6dbe47);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#83e055),
+		to(#6dbe47));
+	
+}
+
+button.fight {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #fdfbec;
+	padding: 4px 11px;
+	background: -moz-linear-gradient(
+		top,
+		#5163ad 0%,
+		#6884f7);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#5163ad),
+		to(#6884f7));
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	border: 2px solid #1f2022;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0),
+		0px 1px 0px rgba(255,255,255,0);
+}
+
+.fight:hover{
+	background: -moz-linear-gradient(
+		top,
+		#96aafa 0%,
+		#5163ad);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#96aafa),
+		to(#5163ad));
+}
+
 
 .send {
 	width: 45px;
@@ -406,11 +436,6 @@ button.fight {
 		to(#365c23));
 }
 
-.chatInput{
-	height:39px;
-	width: 345px;
-}
-
 .delete{
 	width: 22px;
 	height: 22px;
@@ -453,78 +478,4 @@ button.fight {
 		linear, left top, left bottom,
 		from(#912220),
 		to(#BA2F2B));
-}
-
-/*Login */
-.loginContainer{
-	height: 300px;
-	width: 570px;
-	border: 2px solid #939191;
-	float: left;
-	margin-left: 5%;
-	margin-top: 2%;
-	padding: 10px;
-	background-color: #F6F7F7;
-}
-
-.loginTwitter {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #ffffff;
-	padding: 10px 20px;
-	background: -moz-linear-gradient(
-		top,
-		#6dd4db 0%,
-		#4d63f7);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#6dd4db),
-		to(#4d63f7));
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-	border: 2px solid #ffffff;
-	-moz-box-shadow:
-		0px 3px 11px rgba(000,000,000,0.1),
-		inset 0px 0px 1px rgba(12,15,15,1);
-	-webkit-box-shadow:
-		0px 3px 11px rgba(000,000,000,0.1),
-		inset 0px 0px 1px rgba(12,15,15,1);
-	box-shadow:
-		0px 3px 11px rgba(000,000,000,0.1),
-		inset 0px 0px 1px rgba(12,15,15,1);
-	text-shadow:
-		0px -1px 0px rgba(000,000,000,0.1),
-		0px 1px 0px rgba(255,255,255,0);
-}
-
-.loginTwitter:hover{
-	background: -moz-linear-gradient(
-		top,
-		#60f7ef 0%,
-		#4d63f7));
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#60f7ef),
-		to(#4d63f7)));
-}
-
-/*about section*/
-.about{
-	border: 2px solid #939191;
-	width:960px;
-	height: 360px;
-	float:left;
-	clear: left;
-	margin-left: 15%;
-	margin-top: 2%;
-	margin-bottom: 9%;
-	padding: 10px;
-	background-color: #F6F7F7;
-}
-
-.aboutContentContainer{
-	width:790px;
-	margin-left: 5%;
-	margin-right: auto;
 }

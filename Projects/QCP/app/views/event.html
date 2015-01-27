@@ -290,11 +290,12 @@
 			<button ng-model="userloggedin.username" ng-if="user.twitter.username && message.author == ('@'+user.twitter.username)" class="delete" ng-click="messages.$remove(message)">X</button>
 		</p> 
 	</div>
+	</div>
 	<!-- chatroom form  -->
 	<form class="chatForm" ng-submit="sendMessage()">
 		<input class="chatInput" type="text" ng-model="newMessage.body" placeholder="Type Message Here . . ." maxlength="200" autofocus required/>
 		<button class="send" type="submit">Send</button>
 	</form>
 
-</div>
+
 </div>
