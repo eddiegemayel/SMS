@@ -157,7 +157,7 @@ a{
 .event{
 	border: 2px solid #939191;
 	width:800px;
-	height: 1050px;
+	height: 1150px;
 	float:left;
 	clear: left;
 	margin-left: 5%;
@@ -177,19 +177,21 @@ a{
 	padding-left: 35px;
 }
 
-.row3{
+.columnLeft{
 	float: left;
 	padding-left: 187px;
 	text-align: right;
-	margin-top: 1%;
+	margin-top: 5%;
+	margin-bottom: 3%;
 	padding-bottom: 5px;
 }
 
-.row4{
+.columnRight{
 	float: right;
 	padding-right: 187px;
 	text-align: left;
-	margin-top: 1%;
+	margin-top: 5%;
+	margin-bottom: 3%;
 	padding-bottom: 5px;
 }
 

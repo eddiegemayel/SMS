@@ -82,14 +82,17 @@
 
 	<!-- Lower area where result details are shown -->
 	<div class="results">
-	<!-- Live percentage vote results -->
-	<h2>Live Pick Results</h2>
-		<h3>The General Consensus From </h3>
+		<!-- Live percentage vote results -->
+		<h2>Live Results</h2>
+		<h3>The <span class="highlight">Green</span> Highlights Who Is Recieving Majority Picks</h3>
 		<!-- Calculates total number of votes by adding them all together -->
-		<h4><span class="highlight">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> votes</h4>
+		<h4>General Consensus From 
+		<span class="highlight">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> 
+		Votes</h4>
+		
 
-	<!-- row of fighter pick results -->
-	<div class="row3">
+	<!-- column of fighter pick results -->
+	<div class="columnLeft">
 		<!-- little equation to find the percentages of votes 
 			Number of votes for the fighter divided by number of votes between fighter and his opponent added
 			Multiplied by 100 to show the true percent
@@ -105,8 +108,8 @@
 		<h3><span ng-class="{'highlight':(redFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  <span class="red">LI</span></h3>
 	</div>
 
-		<!-- another row of fighter pick results -->
-	<div class="row4">
+		<!-- another column of fighter pick results -->
+	<div class="columnRight">
 		<h3>-- |Cormier : <span ng-class="{'highlight':(blueFight1.length / (redFight1.length + blueFight1.length) * 100) > 50}">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> </h3>
 		<h3>-- |Silva : <span ng-class="{'highlight':(blueFight2.length / (redFight2.length + blueFight2.length) * 100) > 50}">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> </h3>
 		<h3>-- |Browne : <span ng-class="{'highlight':(blueFight3.length / (redFight3.length + blueFight3.length) * 100) > 50}">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> </h3>
