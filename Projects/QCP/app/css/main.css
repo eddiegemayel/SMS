@@ -172,30 +172,12 @@ a{
 
 .row1{
 	padding: 10px;
-	padding-left: 35px;
+	padding-left: 45px;
 }
 
 .row2{
 	padding: 10px;
-	padding-left: 35px;
-}
-
-.columnLeft{
-	float: left;
-	padding-left: 187px;
-	text-align: right;
-	margin-top: 5%;
-	margin-bottom: 3%;
-	padding-bottom: 5px;
-}
-
-.columnRight{
-	float: right;
-	padding-right: 187px;
-	text-align: left;
-	margin-top: 5%;
-	margin-bottom: 3%;
-	padding-bottom: 5px;
+	padding-left: 45px;
 }
 
 .fight1form{
@@ -217,6 +199,24 @@ a{
 .blueChoice{
 	color: white;
 	background-color: #2C37B7;
+}
+
+.columnLeft{
+	float: left;
+	padding-left: 187px;
+	text-align: right;
+	margin-top: 5%;
+	margin-bottom: 3%;
+	padding-bottom: 5px;
+}
+
+.columnRight{
+	float: right;
+	padding-right: 187px;
+	text-align: left;
+	margin-top: 5%;
+	margin-bottom: 3%;
+	padding-bottom: 5px;
 }
 
 /*Live Results area---------------------------------------------------------------------------------------------------------------*/
