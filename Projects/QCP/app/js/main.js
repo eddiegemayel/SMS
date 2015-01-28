@@ -15,10 +15,6 @@ app.config(['$routeProvider', function($routeProvider){
 		when('/about', {
 			controller:"aboutController",
 			templateUrl:"views/about.html"
-		}).
-		when('/login', {
-			controller:"loginController",
-			templateUrl : "views/login.html"
 		});
 }]);
 
@@ -297,11 +293,5 @@ app.controller('eventController', ['$scope', '$firebase', function($scope, $fire
 		//empty message inputs
 		$scope.newMessage = {};
 	}
-
-}]);
-
-//login controller
-app.controller('loginController', ['$rootScope', '$firebase', function ($rootScope,$firebase) {
-	//test code
 
 }]);
