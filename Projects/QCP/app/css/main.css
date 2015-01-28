@@ -131,7 +131,7 @@ a{
 	margin-right: 5%;
 	margin-top: 2%;
 	background-color: #F5F7F7;
-	margin-bottom: 9%;
+	margin-bottom: 7%;
 }
 
 .floatRight{
@@ -165,7 +165,7 @@ a{
 	clear: left;
 	margin-left: 5%;
 	margin-top: 2%;
-	margin-bottom: 9%;
+	margin-bottom: 7%;
 	padding: 10px;
 	background-color: #F5F7F7;
 }
@@ -295,7 +295,7 @@ a{
 	clear: left;
 	margin-left: 15%;
 	margin-top: 2%;
-	margin-bottom: 9%;
+	margin-bottom: 7%;
 	padding: 10px;
 	background-color: #F5F7F7;
 }
@@ -400,7 +400,7 @@ button.fight {
 
 
 .send {
-	width: 45px;
+	width: 50px;
 	height: 45px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
