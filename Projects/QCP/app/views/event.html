@@ -84,7 +84,6 @@
 	<div class="results">
 		<!-- Live percentage vote results -->
 		<h2>Live Results</h2>
-		<h3>The <span class="highlight">Green</span> Highlights Who Is Recieving Majority Picks</h3>
 		<!-- Calculates total number of votes by adding them all together -->
 		<h4>General Consensus From 
 		<span class="highlight">{{redFight1.length + blueFight1.length + redFight3.length + redFight4.length + blueFight2.length + blueFight3.length + blueFight4.length}}</span> 
@@ -105,7 +104,7 @@
 		<h3><span ng-class="{'highlight':(redFight1.length / (redFight1.length + blueFight1.length) * 100) > 50}">{{redFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> : Jones| --</h3>
 		<h3><span ng-class="{'highlight':(redFight2.length / (redFight2.length + blueFight2.length) * 100) > 50}">{{redFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> : Diaz| --</h3>
 		<h3><span ng-class="{'highlight':(redFight3.length / (redFight3.length + blueFight3.length) * 100) > 50}">{{redFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> : Overeem| --</h3>
-		<h3><span ng-class="{'highlight':(redFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  <span class="red">LI</span></h3>
+		<h3><span ng-class="{'highlight':(redFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{redFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span> : Aldo|  --</h3>
 	</div>
 
 		<!-- another column of fighter pick results -->
@@ -113,7 +112,7 @@
 		<h3>-- |Cormier : <span ng-class="{'highlight':(blueFight1.length / (redFight1.length + blueFight1.length) * 100) > 50}">{{blueFight1.length / (redFight1.length + blueFight1.length) * 100 | number : 1}}%</span> </h3>
 		<h3>-- |Silva : <span ng-class="{'highlight':(blueFight2.length / (redFight2.length + blueFight2.length) * 100) > 50}">{{blueFight2.length / (redFight2.length + blueFight2.length) * 100 | number : 1}}%</span> </h3>
 		<h3>-- |Browne : <span ng-class="{'highlight':(blueFight3.length / (redFight3.length + blueFight3.length) * 100) > 50}">{{blueFight3.length / (redFight3.length + blueFight3.length) * 100 | number : 1}}%</span> </h3>
-		<h3><span class="red">VE</span> |Mcgregor : <span ng-class="{'highlight':(blueFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
+		<h3>-- |Mcgregor : <span ng-class="{'highlight':(blueFight4.length / (redFight4.length + blueFight4.length) * 100) > 50}">{{blueFight4.length / (redFight4.length + blueFight4.length) * 100 | number : 1}}%</span></h3>
 	</div>
 
 	<!-- Breakdown Area Begins -->
