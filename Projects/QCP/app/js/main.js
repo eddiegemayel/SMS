@@ -15,6 +15,8 @@ app.config(['$routeProvider', function($routeProvider){
 		when('/about', {
 			controller:"aboutController",
 			templateUrl:"views/about.html"
+		}).otherwise({
+			templateUrl: "views/error.html"
 		});
 }]);
 
