@@ -55,34 +55,33 @@ a{
 
 /*Main Header---------------------------------------------------------------------------------------------------------------*/
 /*index.html---------------------------------------------------------------------------------------------------------------*/
-#logo{
-	margin-left: 380px;
-	padding: 0;
-}
+/*#logo{
+	display: block;
+}*/
 
 
 /*Navigation---------------------------------------------------------------------------------------------------------------*/
-.leftNav{
-	float: left;
-	margin-left: 1%;
-	margin-top: 6%;
-}
-
 .rightNav{
 	float: right;
-	margin-right: 1%;
-	margin-top: 6%;
+	margin-right: 5px;
+	margin-top: 100px;
 }
 
 
 /*Top section home page---------------------------------------------------------------------------------------------------------------*/
 /*home.html---------------------------------------------------------------------------------------------------------------*/
+.content{
+	margin-right: 6%;
+	margin-left: 6%;
+}
+
 .topSection{
 	padding: 15px;
 	height: 70px;
 	background-color: #5163AD;
 	color:#F5F7F7;
 	opacity: .92;
+	/*color: black;*/
 }
 
 .tagline{
@@ -102,7 +101,7 @@ a{
 	width: 620px;
 	border: 1px solid #939191;
 	float: left;
-	margin-left: 5%;
+	margin-left: 50px;
 	margin-top: 2%;
 	padding: 10px;
 	background-color: #F5F7F7;
@@ -117,9 +116,6 @@ a{
 	margin-right: 2%;
 }
 
-
-
-
 /*Upcoming fights---------------------------------------------------------------------------------------------------------------*/
 .upcoming{
 	border: 1px solid #939191;
@@ -128,10 +124,9 @@ a{
 	float: right;
 	clear: right;
 	padding: 10px;
-	margin-right: 5%;
+	margin-right: 50px;
 	margin-top: 2%;
 	background-color: #F5F7F7;
-	margin-bottom: 7%;
 }
 
 .floatRight{
@@ -188,7 +183,7 @@ a{
 .fight2form{
 	float: right;
 	text-align: left;
-	padding-right: 37px;
+	padding-right: 32px;
 }
 
 .redChoice{
