@@ -101,7 +101,7 @@ a{
 	width: 620px;
 	border: 1px solid #939191;
 	float: left;
-	margin-left: 50px;
+	/*margin-left: 1px;*/
 	margin-top: 2%;
 	padding: 10px;
 	background-color: #F5F7F7;
@@ -124,7 +124,7 @@ a{
 	float: right;
 	clear: right;
 	padding: 10px;
-	margin-right: 50px;
+	/*margin-right: 1px;*/
 	margin-top: 2%;
 	background-color: #F5F7F7;
 }
